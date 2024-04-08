@@ -1,0 +1,133 @@
+﻿
+
+<header>
+      <nav>
+        <div class="navbar navegador ">
+          <a  href='@Url.Action("Bienvenida", "Dennys")'><img src="../IMG/logo-dennys.png" alt="Logo"></a>
+          <div class="div-navegador">
+
+          <div class="navbar-item">
+            <a class="linkk"  href='@Url.Action("Bienvenida", "Dennys")'>Inicio</a>
+          </div>
+
+          <div class="navbar-item">
+            <a class="linkk" href='@Url.Action("Ayuda", "Dennys")'>Ayuda</a>
+          </div>
+
+          <div class="navbar-item">
+             <li class="nav-item dropdown">
+                <a class="linkk dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Funcionalidades
+                </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Tu Reserva</a></li>
+                    <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesion</a></li>
+                  </ul>
+            </li>
+
+          </div>
+         
+           <div class="navbar-item">
+            <a class="linkk " aria-disabled="true" href= '@Url.Action("Contactanos", "Dennys")'>Contactanos</a>
+          </div>
+
+           
+          </div>
+        </div>
+        
+      </nav>
+    </header>
+<main class="cuerpo">
+    <div class="primeras3">
+        @foreach (Restaurante item in ViewBag.ListaRestaurantes)
+        {
+            <div class="padre2">
+                    <img class="imgan" src="@item.Imagen" alt="">
+                <div class="div-p-nombre">
+                    <p>@item.Nombre</p>
+                </div>
+                <div class="div-p-Direccion">
+                    <p>@item.Direccion</p>
+                </div>
+
+                <div class="btns">
+                    <div class="btn3">
+                        <button type="button" class="bot2" data-bs-toggle="modal" data-bs-target="#ModalReserva" onclick="cargarIdRestaurante(@item.IdRestaurante)">Reservar</button>
+                    </div>
+
+                    <a href='@Url.Action("VerMas", "Dennys", new{id = @item.IdRestaurante})' class="bot1">Ver Mas</a>
+
+
+                  <a href='@Url.Action("EliminarRestaurante", "Dennys", new {idResto = @item.IdRestaurante})' class="bot1">Eliminar Restaurante</a>
+
+                    
+                </div>
+            </div>
+        }
+    </div>
+</main>
+
+  <!--Reserva-->
+<div class="modal" tabindex="-1" id="ModalReserva" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="div-lAL">
+          <h5 class="modal-title">Reserva de Mesa</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post">
+          <div class="imgs-flex">
+            <img class="p"  src="../IMG/calendario.png" onclick="Calendario()" alt="">
+            <img class="p" src="../IMG/personas.png" onclick="SeleccionarCantidadPersonas()" alt="">
+            <img class="p" src="../IMG/reloj.png" onclick="SeleccionarHorario()" alt="">
+            </div>
+           
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button class="btn btn-primary" onclick="alertaReserva(), GuardarReserva(@BD.user.IdCliente)">Guardar Reserva</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!--Valorar-->
+  <footer class="pie-pagina">
+
+
+  <div class="grupo-1"> 
+    <div class="box">
+      <figure>
+        <a href='@Url.Action("Bienvenida", "Dennys")'>
+          <img src="../img/logo-dennys.png"  >
+        </a>
+      </figure>
+    </div>
+    <div class="box">
+      <h2>SOBRE NOSOTROS</h2>
+      <p>Pagina para reservar y compartir tus experiencias en diferentes restaurantes</p>
+      <p>Conéctate con restaurantes: reserva, deja reseñas y accede a detalles fácilmente.</p>
+    </div>
+    <div class="box">
+      <h2>SIGUENOS</h2>
+      <div class="red-social">
+        <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.whatsapp.com/?lang=es" class="fa fa-whatsapp" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grupo-2">
+    <small>&copy; 2023 <b>Dennys </b>Todos los derechos reservados</small>
+  </div>
+
+
+</footer>

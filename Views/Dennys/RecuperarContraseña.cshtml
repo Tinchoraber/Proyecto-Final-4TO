@@ -1,0 +1,96 @@
+
+
+<div class="grilla">
+          <div class="imagen"></div>
+          <div class="padre">
+            <div class="formulario">
+              <div class="logo">
+                <img src="../img/logo-dennys.png" alt="" />
+              </div>
+              
+                
+
+                @if (ViewBag.ContraseñaRecuperada != null)
+                {
+                    <h2 class="h2-recu">Contraseña Recuprerada!!</h2>
+                    <div class="padre-recu">
+                    
+                    <p class="p-recu">Tu contraseña es: <strong> @ViewBag.ContraseñaRecuperada </strong> </p>
+                    <div class="padre-button-recu">
+                                    <div class="div-boton">
+                                    <button class="button" type="submit" >
+                                        <a href='@Url.Action("login", "Dennys")'>Iniciar sesion</a>
+                                    </button>
+                                    </div>
+                                    </div>
+                                    </div>
+                }
+                else
+                {
+                    <h2 class="h2-recu">Restablecer contraseña</h2>
+                    <form action='@Url.Action("RecuperarContraseña", "Dennys")' method="post" class="div-form">
+                        <div class="recu-div">
+                        <label class="label-recu" for="Email">Email*</label>
+                        <input type="text" name="Email" placeholder="ingrese su email" required>
+                        </div>
+                  <div class="abuelo-button-recu">
+                                    <div class="padre-button-recu">
+                                    <div class="div-boton">
+                                    <button class="button" type="submit">
+                                        Recuperar contraseña
+                                    </button>
+                                    </div>
+                                    </div>
+
+                                   <div class="padre-button">
+                <div class="div-boton">
+                  <button class="button" type="submit">
+                   <a href='@Url.Action("login", "Dennys")'>Volver</a>
+                  </button>
+                </div>
+              </div>
+              </div>
+
+                        @if (ViewBag.ErrorRecuperación != null)
+                        {
+                            <p class="error">@ViewBag.ErrorRecuperación</p>
+                        }
+
+                    </form>
+                }
+
+
+            </div>
+          </div>
+        </div>
+
+<footer class="pie-pagina">
+
+
+  <div class="grupo-1"> 
+    <div class="box">
+      <figure>
+        <a href='@Url.Action("Bienvenida", "Dennys")'>
+          <img src="../img/logo-dennys.png" alt="logo" >
+        </a>
+      </figure>
+    </div>
+    <div class="box">
+      <h2>SOBRE NOSOTROS</h2>
+      <p>Pagina para reservar y compartir tus experiencias en diferentes restaurantes</p>
+      <p>Conéctate con restaurantes: reserva, deja reseñas y accede a detalles fácilmente.</p>
+    </div>
+    <div class="box">
+      <h2>SIGUENOS</h2>
+      <div class="red-social">
+        <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.whatsapp.com/?lang=es" class="fa fa-whatsapp" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grupo-2">
+    <small>&copy; 2023 <b>Dennys </b>Todos los derechos reservados</small>
+  </div>

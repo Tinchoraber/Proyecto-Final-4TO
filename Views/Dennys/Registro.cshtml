@@ -1,0 +1,90 @@
+<main>
+      <div class="grilla">
+        <div class="imagen">
+            
+        </div>
+        <div class="padre">
+          <div class="formulario">
+            <div class="logo">
+              <img src="../img/logo-dennys.png">
+            </div>
+            <form action='@Url.Action("GuardarCliente", "Dennys")' class="div-form" onsubmit= "return validarContraseña()" method="post">
+              
+              <div class="label-input">
+                <label for="nombre">Nombre*</label>
+                <input type="text" placeholder="Nombre" name="Nombre" required />
+              </div>
+              <div class="label-input">
+                <label for="nombre">Apellido*</label>
+                <input type="text" placeholder="Apellido" name="Apellido" required />
+              </div>
+
+              <div class="label-input">
+                <label for="nombre">Email*</label>
+                <input type="text" placeholder="Email" name="Email" id="email" required />
+              </div>
+              <div class="label-input">
+                <label for="nombre">Contraseña*</label>
+                <input type="password" placeholder="Contraseña" name="Contraseña" id="contraseña" required />
+              </div>
+              <div class="label-input">
+                <label for="nombre">Confirmar Contraseña*</label>
+                  <input type="password" placeholder="Contraseña" name="Contraseña" id="contraseña2"  required>
+              </div>
+                <p class="inc1" style="color: rgb(200, 255, 0);" id="incorrecta1"></p>
+                <p class="inc2" style="color: rgb(200, 255, 0);" id="incorrecta2"></p>
+              
+              <div class="padre-button">
+              <div class="div-boton">
+                <button class="button" type="submit">
+                  Registrarte
+                </button>
+                <div class="div-ya-tenes">
+                   <p class="p-ya-tenes">Ya tenes cuenta?</p>
+                   <a class="a-ya-tenes" href='@Url.Action("Login", "Dennys")'>Inicia Sesion</a>
+                </div>
+              </div>
+            </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="pie-pagina">
+
+
+  <div class="grupo-1"> 
+    <div class="box">
+      <figure>
+        <a>
+          <img src="../img/logo-dennys.png"  >
+        </a>
+      </figure>
+    </div>
+    <div class="box">
+      <h2>SOBRE NOSOTROS</h2>
+      <p>Pagina para reservar y compartir tus experiencias en diferentes restaurantes</p>
+      <p>Conéctate con restaurantes: reserva, deja reseñas y accede a detalles fácilmente.</p>
+    </div>
+    <div class="box">
+      <h2>SIGUENOS</h2>
+      <div class="red-social">
+        <a href="https://www.facebook.com/?locale=es_LA" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://twitter.com/?lang=es" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.whatsapp.com/?lang=es" class="fa fa-whatsapp" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grupo-2">
+    <small>&copy; 2023 <b>Dennys </b>Todos los derechos reservados</small>
+  </div>
+
+
+</footer>
+ 
+
+

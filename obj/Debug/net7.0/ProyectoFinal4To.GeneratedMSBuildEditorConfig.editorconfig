@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoFinal4To
+build_property.RootNamespace = ProyectoFinal4To
+build_property.ProjectDir = Z:\2024\Proyecto Final\Proyecto-Final-4to\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = Z:\2024\Proyecto Final\Proyecto-Final-4to
+build_property._RazorSourceGeneratorDebug = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/AgregarRestaurante.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXEFncmVnYXJSZXN0YXVyYW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/ayuda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXGF5dWRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/Bienvenida.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXEJpZW52ZW5pZGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/contactanos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXGNvbnRhY3Rhbm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXEhvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/RecuperarContraseña.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFJlY3VwZXJhckNvbnRyYXNlw7FhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFJlZ2lzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/Reservas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFJlc2VydmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/VerMas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFZlck1hcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Dennys/VerReseñas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFZlclJlc2XDsWFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2024/Proyecto Final/Proyecto-Final-4to/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1tf69bpqcj
