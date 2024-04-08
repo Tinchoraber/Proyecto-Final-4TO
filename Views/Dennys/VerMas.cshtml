@@ -21,8 +21,12 @@
                     <p>Descripcion: @ViewBag.InfoRes.Descripcion</p>
                 </div>  
                 <div class="div-p-Direccion">
-                    <p>Valoracion Promedio: @ViewBag.ValoracionPromedio.ValoracionPromedio estrellas</p>
-                </div>  
+                    <p>Valoracion Promedio: @ViewBag.ValoracionPromedio estrellas</p>
+                </div> 
+                @for (int i = 1; i <= ViewBag.ValoracionPromedio; i++)
+                                {
+                                    <img class="img-reseña" src="/IMG/estrella.PNG">
+                                }
     </div>
    
         <hr>

@@ -182,12 +182,12 @@ public static class BD
     }
     return clientes;
 }
-    public static Reseña calcularValoracionPromedio(int idRestaurante)
+    public static float calcularValoracionPromedio(int idRestaurante)
 {
      using(SqlConnection db = new SqlConnection(connectionString))
         {
             string sp = "sp_CalcularValoracionPromedio";
-            return db.QueryFirstOrDefault<Reseña>(sp, new{@IdRestaurante = idRestaurante}, 
+            return db.QueryFirstOrDefault<float>(sp, new{@IdRestaurante = idRestaurante}, 
             commandType: System.Data.CommandType.StoredProcedure);
         }
        
