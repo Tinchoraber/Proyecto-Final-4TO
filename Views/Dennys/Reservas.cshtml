@@ -56,7 +56,7 @@
                     <p>Fecha: @item.FechaReserva.ToShortDateString()</p>
                     <p>Hora: @item.HoraReserva</p>
                     <p>Cantidad de Personas: @item.CantidadPersonas</p>
-                    <a href='@Url.Action("EliminarReserva", "Dennys", new {idReserva = @item.IdReserva})' class="bot1">Eliminar Reserva</a>
+                    <a href='@Url.Action("EliminarReserva", "Dennys", new {idReserva = @item.IdReserva, idCliente = BD.user.IdCliente})' class="bot1">Eliminar Reserva</a>
 
                     </div>
                 </div>

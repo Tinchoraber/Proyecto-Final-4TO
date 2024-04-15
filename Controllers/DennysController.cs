@@ -119,10 +119,12 @@ public IActionResult EliminarRestaurante(int idResto)
     return RedirectToAction("Bienvenida");
 }
 
-public IActionResult EliminarReserva(int idReserva)
+public IActionResult EliminarReserva(int idReserva, int idCliente)
 {
     BD.EliminarReserva(idReserva);
-    return RedirectToAction("Reserva");
+    ViewBag.ListaReservas = BD.GetListaReservaDeUnCliente(idCliente);
+    ViewBag.Restaurantes = BD.GetListaRestauranteReservaDeUnCliente(idCliente);
+    return View("Reservas");
 }
 
 public IActionResult ObtenerReservas(int idCliente)

@@ -148,7 +148,6 @@ C:\Users\47963426\Proyecto-Final-4to\obj\Debug\net7.0\staticwebassets.developmen
 C:\Users\47963426\Proyecto-Final-4to\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\47963426\Proyecto-Final-4to\obj\Debug\net7.0\scopedcss\bundle\ProyectoFinal4To.styles.css
 C:\Users\47963426\Proyecto-Final-4to\obj\Debug\net7.0\scopedcss\projectbundle\ProyectoFinal4To.bundle.scp.css
-C:\Users\47963426\Proyecto-Final-4to\obj\Debug\net7.0\ProyectoFinal4To.csproj.CopyComplete
 C:\Users\47963426\Proyecto-Final-4to\obj\Debug\net7.0\ProyectoFinal4To.dll
 C:\Users\47963426\Proyecto-Final-4to\obj\Debug\net7.0\refint\ProyectoFinal4To.dll
 C:\Users\47963426\Proyecto-Final-4to\obj\Debug\net7.0\ProyectoFinal4To.pdb
@@ -350,3 +349,5 @@ Z:\2024\Proyecto Final\Proyecto-Final-4to\obj\Debug\net7.0\ProyectoFinal4To.genr
 Z:\2024\Proyecto Final\Proyecto-Final-4to\obj\Debug\net7.0\ref\ProyectoFinal4To.dll
 Z:\2024\Proyecto Final\Proyecto-Final-4to\obj\Debug\net7.0\ProyectoFinal4To.sourcelink.json
 Z:\2024\Proyecto Final\Proyecto-Final-4to\obj\Debug\net7.0\Proyecto.C27BE03B.Up2Date
+C:\Users\47963426\Proyecto-Final-4TO\obj\Debug\net7.0\ProyectoFinal4To.sourcelink.json
+C:\Users\47963426\Proyecto-Final-4TO\obj\Debug\net7.0\Proyecto.C27BE03B.Up2Date

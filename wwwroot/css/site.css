@@ -879,7 +879,7 @@ p strong {
 .padre-reservas{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
-  grid-template-rows: 1fr 1fr 1fr;
+  
   grid-gap: 40px;
   margin-top: 2rem;
   padding: 1rem;
