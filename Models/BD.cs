@@ -2,7 +2,7 @@ using System.Data.SqlClient;
 using Dapper;
 public static class BD
 {
-    private static string connectionString = @"Server=localhost;DataBase=ReservaRestaurantes;Trusted_Connection=True;";
+    private static string connectionString = @"Server=DESKTOP-OF64MA2\SQLEXPRESS;DataBase=ReservaRestaurantes;Trusted_Connection=True;";
     public static Cliente user;
 
     public static void AgregarRestaurante(Restaurante resto)

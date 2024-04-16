@@ -374,8 +374,21 @@ nav {
 .sa:hover{
   background-color: red;
 }
-.navbar-collapse{
+.navbar-expand-lg .navbar-collapse {
+  justify-content: end;
+}
+
+.items-navegador{
+  display: flex;
   flex-grow: 0 !important;
+}
+@media screen and (max-width:599px) {
+  .items-navegador{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
 }
 .txt-ind{
   display: flex;

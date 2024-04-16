@@ -1,10 +1,14 @@
- <header>
-      <nav>
-        <div class="navbar navegador ">
-          <a href='@Url.Action("Bienvenida", "Dennys")'><img src="../IMG/logo-dennys.png" alt="Logo"></a>
-          <div class="div-navegador">
+<header>
 
-          <div class="navbar-item">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+<a href='@Url.Action("Bienvenida", "Dennys")'><img src="../IMG/logo-dennys.png" alt="Logo"></a>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="items-navegador">
+
+        <div class="navbar-item">
             <a class="linkk"  href='@Url.Action("Bienvenida", "Dennys")'>Inicio</a>
           </div>
 
@@ -24,19 +28,23 @@
                     <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesion</a></li>
                   </ul>
             </li>
-
           </div>
-         
-           <div class="navbar-item">
+          <div class="navbar-item">
             <a class="linkk " aria-disabled="true" href= '@Url.Action("Contactanos", "Dennys")'>Contactanos</a>
           </div>
-
-           
           </div>
-        </div>
-        
-      </nav>
-    </header>
+
+  
+      <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+      
+    </div>
+    
+  </div>
+</nav>
+ </header>
  
  <main>
         <div class="padre">
