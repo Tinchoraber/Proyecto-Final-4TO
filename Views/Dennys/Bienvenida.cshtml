@@ -40,8 +40,9 @@
       </nav>
     </header>
 <main class="cuerpo">
+@Html.Hidden("IdRestaurante")
     <div class="primeras3">
-        @Html.Hidden("IdRestaurante")
+        
         @foreach (Restaurante item in ViewBag.ListaRestaurantes)
         {
             <div class="padre2">
@@ -61,11 +62,12 @@
                     <a href='@Url.Action("VerMas", "Dennys", new{id = @item.IdRestaurante})' class="bot1">Ver Mas</a>
 
 
-                  <a href='@Url.Action("EliminarRestaurante", "Dennys", new {idResto = @item.IdRestaurante})' class="bot1">Eliminar Restaurante</a>
+                    <a href='@Url.Action("EliminarRestaurante", "Dennys", new { idResto = @item.IdRestaurante })' class="bot1">Eliminar Restaurante</a>
 
                     
                 </div>
             </div>
+            
         }
     </div>
 </main>

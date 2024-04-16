@@ -138,7 +138,7 @@ END
 
 
 
-CREATE PROCEDURE sp_EliminarRestaurante
+alter PROCEDURE sp_EliminarRestaurante
     @IdRestaurante INT
 AS
 BEGIN
@@ -163,3 +163,5 @@ AS
 BEGIN
         DELETE FROM Reserva WHERE IdReserva = @IdReserva; 
 END;
+
+select IdRestaurante from Reseña where IdRestaurante = 6 
