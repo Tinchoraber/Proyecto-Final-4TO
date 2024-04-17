@@ -92,15 +92,7 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }
-    public static void Contactanos(Contacto clienteContactado)
-    {
-        using(SqlConnection db = new SqlConnection(connectionString))
-        {
-            string sp = "sp_Contacto";
-            db.Execute(sp, new{ @IdCliente = clienteContactado.IdCliente ,@Nombre = clienteContactado.Nombre, @Apellido = clienteContactado.Apellido,@Telefono = clienteContactado.Telefono,  @Email = clienteContactado.Email, @mensaje = clienteContactado.Mensaje}, 
-            commandType: System.Data.CommandType.StoredProcedure);
-        }
-    }
+   
 
     
     public static Cliente VerificarCredenciales(string Email, string Contraseña)

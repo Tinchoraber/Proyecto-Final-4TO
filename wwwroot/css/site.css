@@ -962,77 +962,7 @@ a{
   background-color: black;
   border: none;
 }
-.contactoo-padre{
-  display: flex;
-  flex-direction: column;
-}
-.titlee-contacto{
-  display: flex;
-  justify-content: center;  
-  margin-top: 50px;  
-}
-.mapaa-contacto{
-  display: flex;
-  justify-content: center;
-}
-.contenedorr-contacto{
-  display: flex;
-  gap: 50px;
-  box-shadow: 0 0 20px rgba(0, 0, 0,0.2);
-  margin: 10px;
-  width: 70%;
-}
-.parrafoo-contacto{
-  margin: 35px;
-  width: 50%;
-  
-}
-.parrafoo-contacto p{
-  text-align: start;
-}
-.div-mapaa{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  margin: 30px;
-  width: 50%;
-}
 
-.Contactanosss{
-  display: flex;
-  justify-content: center;  
-  margin-top: 50px;  
-}
-.formularioo-contacto{
-  display: flex;
-  justify-content: center;
-}
-.formularioo h2{
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.formularioo{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 10px;
-  padding: 30px;
-  gap: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0,0.2);
-  margin-bottom: 40px;
-  width: 70%;
-}
-.formularioo label{
-  font-weight: bold;
-}
-
-.submitt-enviar{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
 .enviarr{
   background-color: black;
@@ -1048,31 +978,7 @@ a{
   color: black;
   background-color: gray;
 }
-@media screen and (max-width:1410px){
-  .contenedorr-contacto{
-      flex-direction: column;
-  }
-  .parrafoo-contacto p{
-      text-align: center; 
-  }
-  .divv-mapa{
-     
-      width: 95%;
-      
-  }  
-  .mapaa{
-      padding-right: 10px;
-      padding-bottom: 60px;
-  }
-  .parrafoo-contacto{
-      padding-top: 50px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      width: 90%;
-  }
-  
-}
+
 .imgs-flex{
   display: flex;
   align-items: center;

@@ -20,10 +20,7 @@ public class DennysController : Controller
     {
         return View("Ayuda");
     }
-      public IActionResult Contactanos()
-    {
-        return View("contactanos");
-    }
+     
     public IActionResult Bienvenida()
     {
         ViewBag.ListaRestaurantes = BD.GetListaRestaurantes();
