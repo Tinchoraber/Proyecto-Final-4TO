@@ -64,9 +64,12 @@
 
                     <a href='@Url.Action("VerMas", "Dennys", new{id = @item.IdRestaurante})' class="bot1">Ver Mas</a>
 
-
-                    <a href='@Url.Action("EliminarRestaurante", "Dennys", new { idResto = @item.IdRestaurante })' class="bot1">Eliminar Restaurante</a>
-
+                    @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+                    {
+                        <a href='@Url.Action("EliminarRestaurante", "Dennys", new { idResto = @item.IdRestaurante })' class="bot1">Eliminar Restaurante</a>
+                    }
+              
+                    
                     
                 </div>
             </div>
