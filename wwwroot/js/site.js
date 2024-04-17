@@ -211,3 +211,30 @@
         }
       }
 
+      document.addEventListener('DOMContentLoaded', function() {
+        // Agregar un evento 'submit' al formulario de búsqueda
+        document.getElementById('formBusqueda').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío automático del formulario
+            filtrarRestaurantes(); // Llamar a la función de filtrado
+        });
+    });
+    
+    // Función para filtrar los restaurantes por nombre
+    function filtrarRestaurantes() {
+        var input = document.querySelector('#inputBusqueda');
+        var filtro = input.value.trim().toUpperCase(); // Usar trim() para eliminar espacios en blanco al inicio y al final
+    
+        var restaurantes = document.querySelectorAll('.padre2');
+    
+        restaurantes.forEach(function(restaurante) {
+            var nombreRestaurante = restaurante.querySelector('.div-p-nombre p').textContent.toUpperCase(); // Obtener el texto del nombre del restaurante
+            // Comprobar si el nombre del restaurante contiene el filtro
+            if (nombreRestaurante.includes(filtro)) {
+                restaurante.style.display = ''; // Mostrar el restaurante si coincide con el filtro
+            } else {
+                restaurante.style.display = 'none'; // Ocultar el restaurante si no coincide con el filtro
+            }
+        });
+    }
+
+  
