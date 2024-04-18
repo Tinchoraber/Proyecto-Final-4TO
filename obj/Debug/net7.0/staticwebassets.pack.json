@@ -45,6 +45,14 @@
       "PackagePath": "staticwebassets\\IMG\\reloj.png"
     },
     {
+      "Id": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\IMG\\signoMas.png",
+      "PackagePath": "staticwebassets\\IMG\\signoMas.png"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\IMG\\whatsapp.png",
+      "PackagePath": "staticwebassets\\IMG\\whatsapp.png"
+    },
+    {
       "Id": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

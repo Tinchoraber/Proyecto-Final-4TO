@@ -23,7 +23,13 @@
                 </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Tu Reserva</a></li>
-                    <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
+                    
+                    @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+                    {
+                      <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
+                    }
+                    
+                    
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesion</a></li>
                   </ul>
@@ -32,10 +38,12 @@
           
 
   
-      <form id="formBusqueda" class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Busca aqui" aria-label="Search" id="formBusqueda">
-      <button class="btn btn-outline-success" type="submit">Buscar</button>
-    </form>
+              
+
+               <form class="d-flex" role="search">
+                <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscá aqui" aria-label="Search">
+                <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
+              </form>
       
     </div>
     
@@ -48,7 +56,9 @@
         
         @foreach (Restaurante item in ViewBag.ListaRestaurantes)
         {
+          <div class="carta">
             <div class="padre2">
+               
                     <img class="imgan" src="@item.Imagen" alt="">
                 <div class="div-p-nombre">
                     <p>@item.Nombre</p>
@@ -64,16 +74,14 @@
 
                     <a href='@Url.Action("VerMas", "Dennys", new{id = @item.IdRestaurante})' class="bot1">Ver Mas</a>
 
-                    @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+	 @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
                     {
                         <a href='@Url.Action("EliminarRestaurante", "Dennys", new { idResto = @item.IdRestaurante })' class="bot1">Eliminar Restaurante</a>
-                    }
-              
-                    
-                    
+                    }	
+                 
                 </div>
             </div>
-            
+            </div>
         }
     </div>
 </main>

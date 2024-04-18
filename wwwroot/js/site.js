@@ -219,22 +219,24 @@
         });
     });
     
-    // Función para filtrar los restaurantes por nombre
-    function filtrarRestaurantes() {
-        var input = document.querySelector('#inputBusqueda');
-        var filtro = input.value.trim().toUpperCase(); // Usar trim() para eliminar espacios en blanco al inicio y al final
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchButton = document.getElementById("searchButton");
+      searchButton.addEventListener("click", filterCardsByTitle);
+    });
     
-        var restaurantes = document.querySelectorAll('.padre2');
+    function filterCardsByTitle() {
+      const searchInput = document.getElementById("searchInput");
+      const searchValue = searchInput.value.trim().toLowerCase();
     
-        restaurantes.forEach(function(restaurante) {
-            var nombreRestaurante = restaurante.querySelector('.div-p-nombre p').textContent.toUpperCase(); // Obtener el texto del nombre del restaurante
-            // Comprobar si el nombre del restaurante contiene el filtro
-            if (nombreRestaurante.includes(filtro)) {
-                restaurante.style.display = ''; // Mostrar el restaurante si coincide con el filtro
-            } else {
-                restaurante.style.display = 'none'; // Ocultar el restaurante si no coincide con el filtro
-            }
-        });
+      const cards = document.querySelectorAll(".carta"); // Selecciona todas las tarjetasheis
+      cards.forEach((carta) => {
+          const title = carta.querySelector(".div-p-nombre p").textContent.toLowerCase(); // Obtén el título del restaurante
+          if (title.includes(searchValue)) {
+            carta.style.display = "block"; // Muestra la tarjeta si coincide con la búsqueda
+          } else {
+            carta.style.display = "none"; // Oculta la tarjeta si no coincide con la búsqueda
+          }
+      });
     }
 
   

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V2Rsa9DlUTHFAjHKvTv1BBxYN5n83v/tPnDAHH72tok=",
+  "Hash": "ABejV9G0grPGCG3UdX8pkHga4dqUGfNtUXKhc/c2fhc=",
   "Source": "ProyectoFinal4To",
   "BasePath": "_content/ProyectoFinal4To",
   "Mode": "Default",
@@ -253,6 +253,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\IMG\\reloj.png"
+    },
+    {
+      "Identity": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\IMG\\signoMas.png",
+      "SourceId": "ProyectoFinal4To",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\",
+      "BasePath": "_content/ProyectoFinal4To",
+      "RelativePath": "IMG/signoMas.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\signoMas.png"
+    },
+    {
+      "Identity": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\IMG\\whatsapp.png",
+      "SourceId": "ProyectoFinal4To",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\",
+      "BasePath": "_content/ProyectoFinal4To",
+      "RelativePath": "IMG/whatsapp.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\whatsapp.png"
     },
     {
       "Identity": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\js\\site.js",

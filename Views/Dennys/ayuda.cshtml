@@ -23,19 +23,22 @@
                 </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Tu Reserva</a></li>
-                    <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
+                    
+                    @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+                    {
+                      <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
+                    }
+                    
+                    
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesion</a></li>
                   </ul>
             </li>
           </div>
-         
+          
 
   
-      <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+      
       
     </div>
     
@@ -98,7 +101,7 @@
           <p>Tambien podes agregar tu restaurante haciendo clic aqui:</p>
               <div class="padre-buttonn">
               <div class="div-botonn">
-                <button class="button" type="submit" ><a href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></button>
+                <button class="button" type="submit" ><a href='@Url.Action("AgregarRestaurante", "Dennys")'> <img id="singo" src="../img/signoMas.png">Agregar Restaurante</a></button>
                 </div>
                 </div>        </div>
         </div>
@@ -113,7 +116,7 @@
         <p>Para realizar una consulta puedes comunicarte con nosotros via whatsapp.</p>
         <div class="padre-buttonn">
               <div class="div-botonn">
-                <button class="button"><a href="https://wa.me/541141640632?text=Hola queria realizar una consulta sobre la pagina Dennys" target="_blank"> <img id="wpppp" src="../img/WhatsApp.svg.png" />  Contactanos</a></button>
+                <button class="button"><a href="https://wa.me/541141640632?text=Hola queria realizar una consulta sobre la pagina Dennys" target="_blank"> <img id="wpppp" src="../img/whatsapp.png" />  Contactanos</a></button>
                 </div>
                 </div>
       </div>

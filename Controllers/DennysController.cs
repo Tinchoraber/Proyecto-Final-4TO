@@ -24,6 +24,7 @@ public class DennysController : Controller
     public IActionResult Bienvenida()
     {
         ViewBag.ListaRestaurantes = BD.GetListaRestaurantes();
+        ViewBag.Cliente = BD.user;
         return View("Bienvenida");
     }
 
@@ -59,7 +60,7 @@ public class DennysController : Controller
     {
         BD.user = cliente;
         ViewBag.ListaRestaurantes = BD.GetListaRestaurantes();
-        return View("Bienvenida");
+        return RedirectToAction("Bienvenida");
     }
     else
     {
