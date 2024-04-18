@@ -506,9 +506,24 @@ nav {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .4s;
  }
+ .boton-reserva{
+  background-color: rgb(255, 80, 80);
+  padding: 10px 10px;
+  color: #fff;
+ 
+  letter-spacing: .1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width:50%;
+ }
  
  .bot1 span:last-child {
   display: none;
+ }
+ .span-reservas{
+  font-weight: bold;
  }
  
  .bot1:hover {
@@ -900,6 +915,29 @@ p strong {
   grid-gap: 40px;
   margin-top: 2rem;
   padding: 1rem;
+}
+@media screen and (max-width:1308px) {
+  .padre-reservas{
+    grid-template-columns: 1fr 1fr  ;
+  }
+  
+}
+@media screen and (max-width:1048px)  {
+  .padre-reservas{
+    grid-template-columns: 1fr   ;
+  }
+  
+}
+@media screen and (max-width:522px)  {
+  .dentro-reserva{
+    display: none;
+  }
+  
+}
+.a-btn-reservas{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
 .dentro-reserva{
   padding: 20px; 

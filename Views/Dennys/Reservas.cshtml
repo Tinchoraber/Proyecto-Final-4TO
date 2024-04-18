@@ -52,21 +52,22 @@
     <div class="padre-reservas">
         @foreach (var item in ViewBag.ListaReservas)
         {
-            <div class="card-reseña">
+          <div class="card-reseña">
                 <div class="">
-                <div class="div-imgd">
-                  <img src="@ViewBag.Restaurantes[indice].Imagen" alt="">
+                  <div class="div-imgd">
+                    <img src="@ViewBag.Restaurantes[indice].Imagen" alt="">
                   </div>
-                  <div class="dentro-reserva">
-                    <p>Lugar: @item.NombreRestaurante</p>
-                    <p>Fecha: @item.FechaReserva.ToShortDateString()</p>
-                    <p>Hora: @item.HoraReserva</p>
-                    <p>Cantidad de Personas: @item.CantidadPersonas</p>
-                    <a href='@Url.Action("EliminarReserva", "Dennys", new {idReserva = @item.IdReserva, idCliente = BD.user.IdCliente})' class="bot1">Eliminar Reserva</a>
-
+                    <div class="dentro-reserva">
+                      <p><span class="span-reservas" >Lugar:</span>  @item.NombreRestaurante</p>
+                      <p><span class="span-reservas" >Fecha:</span> @item.FechaReserva.ToShortDateString()</p>
+                      <p><span class="span-reservas" >Hora:</span> @item.HoraReserva</p>
+                      <p><span class="span-reservas" >Cantidad de Personas:</span> @item.CantidadPersonas</p>
                     </div>
-                </div>
-            </div>
+                        <div class="a-btn-reservas">
+                          <a href='@Url.Action("EliminarReserva", "Dennys", new {idReserva = @item.IdReserva, idCliente = BD.user.IdCliente})' class="boton-reserva">Eliminar Reserva</a>
+                        </div>
+              </div>
+          </div>
             indice = indice + 1;
         }
     </div>
