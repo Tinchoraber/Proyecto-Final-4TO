@@ -227,16 +227,21 @@
     function filterCardsByTitle() {
       const searchInput = document.getElementById("searchInput");
       const searchValue = searchInput.value.trim().toLowerCase();
-    
-      const cards = document.querySelectorAll(".carta"); // Selecciona todas las tarjetasheis
+      
+      const cards = document.querySelectorAll(".carta"); 
+      let foundRestaurant = false; 
+      
       cards.forEach((carta) => {
-          const title = carta.querySelector(".div-p-nombre p").textContent.toLowerCase(); // Obtén el título del restaurante
-          if (title.includes(searchValue)) {
-            carta.style.display = "block"; // Muestra la tarjeta si coincide con la búsqueda
-          } else {
-            carta.style.display = "none"; // Oculta la tarjeta si no coincide con la búsqueda
-          }
+        const title = carta.querySelector(".div-p-nombre p").textContent.toLowerCase(); 
+        if (title.includes(searchValue)) {
+          carta.style.display = "block"; 
+          foundRestaurant = true; 
+        } 
       });
+      
+      if (!foundRestaurant) {
+        alert("No se ha encontrado ningún restaurante con cese nombre.");
+      }
     }
 
   

@@ -1,32 +1,40 @@
  @{
   int indice = 0;
 }
-        <div class="padre2">
+        <div class="">
                     <img class="imgan" src="@ViewBag.InfoRes.Imagen" alt="">
                 <div class="div-p-nombre">
                     <p>@ViewBag.InfoRes.Nombre</p>
                 </div>
+                
                 <div class="div-p-Direccion">
                     <p>Direccion: @ViewBag.InfoRes.Direccion</p>
                 </div>
+
                 <div class="div-p-Direccion">
                     <p>Fecha de Fundacion: @ViewBag.InfoRes.FechaFundacion</p>
                 </div>
+
                 <div class="div-p-Direccion">
                     <p>Horario de Apertura: @ViewBag.InfoRes.HorarioApertura</p>
-                </div><div class="div-p-Direccion">
+                </div>
+                
+                <div class="div-p-Direccion">
                     <p>Horario de Clausura: @ViewBag.InfoRes.HorarioClausura</p>
                 </div>
+
                 <div class="div-p-Direccion">
                     <p>Descripcion: @ViewBag.InfoRes.Descripcion</p>
-                </div>  
+                </div> 
+
                 <div class="div-p-Direccion">
                     <p>Valoracion Promedio: @ViewBag.ValoracionPromedio estrellas</p>
                 </div> 
+
                 @for (int i = 1; i <= ViewBag.ValoracionPromedio; i++)
-                                {
+                {
                                     <img class="img-reseña" src="/IMG/estrella.PNG">
-                                }
+                }
     </div>
    
         <hr>

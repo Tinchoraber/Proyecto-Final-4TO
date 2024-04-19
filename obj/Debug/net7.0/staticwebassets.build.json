@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ABejV9G0grPGCG3UdX8pkHga4dqUGfNtUXKhc/c2fhc=",
+  "Hash": "cQmE9yK7CSzMKudi7SBdIcm+O2i4FRit3gsvymXLv9w=",
   "Source": "ProyectoFinal4To",
   "BasePath": "_content/ProyectoFinal4To",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\IMG\\estrella.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\IMG\\IMG_20231210_011749182_MF_PORTRAIT.jpg",
+      "SourceId": "ProyectoFinal4To",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\",
+      "BasePath": "_content/ProyectoFinal4To",
+      "RelativePath": "IMG/IMG_20231210_011749182_MF_PORTRAIT.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IMG\\IMG_20231210_011749182_MF_PORTRAIT.jpg"
     },
     {
       "Identity": "C:\\Users\\MARCOS\\OneDrive\\Documentos\\Ort 2024\\Proyecto-Final-4TO\\wwwroot\\IMG\\logo-dennys.png",
