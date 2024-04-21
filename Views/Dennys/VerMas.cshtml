@@ -8,48 +8,25 @@
 
     <div class="abuelo-VerMas">
 
-        <div class="padre-VerMas">
-            <div class="hijo-VerMas">
-                <div class="div-img-VerMas">
-                    <img class="img-VerMas" src="@ViewBag.InfoRes.Imagen" alt="">
-                </div>
-                    <div class="div-pes-VerMas">        
-                            
-                            <div class="p-VerMas">
-                                <p><strong>Direccion:</strong>  @ViewBag.InfoRes.Direccion</p>
-                            </div>
-
-                            <div class="p-VerMas">
-                                <p><strong>Fecha de Fundacion:</strong>  @ViewBag.InfoRes.FechaFundacion</p>
-                                <p></p>
-                            </div>
-
-                            <div class="p-VerMas">
-                                <p><strong>Horario de Apertura:</strong>  @ViewBag.InfoRes.HorarioApertura</p>
-                            </div>
-                            
-                            <div class="p-VerMas">
-                                <p><strong>Horario de Clausura:</strong> @ViewBag.InfoRes.HorarioClausura</p>
-                            </div>
-
-                            
-                    </div>
-                <div class="descripcion-VerMas" >
-                    <p class="p-descri">Descripcion:</p>
-                    <p> @ViewBag.InfoRes.Descripcion</p>
-                </div> 
-
-                            <div >
-                                <p>Valoracion Promedio: @ViewBag.ValoracionPromedio estrellas</p>
-                            </div> 
-                <div class="div-estrellas-verMas">
-                @for (int i = 1; i <= ViewBag.ValoracionPromedio; i++)
-                {
-                    <img class="estrellas-VerMas" src="/IMG/estrella.PNG">
-                }
-                </div>
+        <div class="card">
+    
+    <img src="@ViewBag.InfoRes.Imagen" class="card-img-top" alt="Imagen del restaurante">
+    <div class="card-body">
+        <p class="card-text"><strong>Dirección:</strong> @ViewBag.InfoRes.Direccion</p>
+        <p class="card-text"><strong>Fecha de Fundación:</strong> @ViewBag.InfoRes.FechaFundacion</p>
+        <p class="card-text"><strong>Horario de Apertura:</strong> @ViewBag.InfoRes.HorarioApertura</p>
+        <p class="card-text"><strong>Horario de Clausura:</strong> @ViewBag.InfoRes.HorarioClausura</p>
+        <p class="card-text"><strong>Descripción:</strong></p>
+        <p class="card-text">@ViewBag.InfoRes.Descripcion</p>
+        <p class="card-text"><strong>Valoración Promedio:</strong> @ViewBag.ValoracionPromedio estrellas</p>
+        <div class="rating">
+            @for (int i = 1; i <= ViewBag.ValoracionPromedio; i++)
+            {
+                <img class="estrella" src="/IMG/estrella.PNG">
+            }
         </div>
     </div>
+</div>
    
         
         <div class="modal-body" >
