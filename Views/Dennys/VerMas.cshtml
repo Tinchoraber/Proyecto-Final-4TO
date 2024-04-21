@@ -1,7 +1,9 @@
  @{
   int indice = 0;
 }
-
+    <div class="div-salir-VerMas">
+        <a type="button" href='@Url.Action("Bienvenida", "Dennys")' class=" a-salir btn btn-outline-secondary">Volver</a>
+    </div>
     <div class="div-titulo">
         <h1>@ViewBag.InfoRes.Nombre</h1>
     </div>
@@ -52,8 +54,8 @@
                     </div>
                 </div>
                 <div class="footer-btns">
-                    <button type="button" class=" boton-esrella btn btn-secondary" data-bs-dismiss="modal">Salir</button>
-                    <button class=" boton-esrella btn btn-primary" data-bs-dismiss="modal" onclick=" GuardarReseña(@BD.user.IdCliente, @ViewBag.InfoRes.IdRestaurante)">Publicar</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn-outline-success"onclick=" GuardarReseña(@BD.user.IdCliente, @ViewBag.InfoRes.IdRestaurante)" data-bs-dismiss="modal">Publicar</button>
                 </div>
     </div>
 

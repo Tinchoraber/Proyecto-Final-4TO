@@ -8,4 +8,5 @@ public class Reserva
      public int CantidadPersonas{get;set;}
      public string NombreRestaurante{get;set;}
      public string Imagen{get;set;}
+     public int CantReservas{get;set;}
 }

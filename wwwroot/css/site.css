@@ -1049,6 +1049,12 @@ a{
     width: 30px;
     
 }
+.div-salir-VerMas{
+
+}
+.a-salir{
+  margin: 1rem;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -1240,31 +1246,10 @@ textarea {
   margin-top: 10px;
 }
 
-.rating {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.rating input {
-  display: none;
-}
 
-.rating label {
-  cursor: pointer;
-  font-size: 30px;
-  color: #ddd;
-}
 
-.rating input:checked ~ label {
-  color: #f1c40f; /* Color de las estrellas seleccionadas */
-}
 
-.footer-btns {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
 
 .boton-esrella {
   padding: 10px 20px;
@@ -1284,20 +1269,3 @@ textarea {
 }
 
 /* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-  .modal-body {
-      padding: 10px;
-  }
-
-  #cuadroTexto textarea {
-      padding: 8px;
-  }
-
-  .rating label {
-      font-size: 24px;
-  }
-
-  .boton-esrella {
-      font-size: 14px;
-  }
-}

@@ -27,6 +27,7 @@ public class DennysController : Controller
         ViewBag.Cliente = BD.user;
         return View("Bienvenida");
     }
+    
 
     public IActionResult Registrarte(int IdUsuario)
     {
@@ -40,9 +41,9 @@ public class DennysController : Controller
         return true;
     }
     
-    public void GuardarReservaAjax(int IdRestaurante, int IdCliente, DateTime fechaReserva, int personasReserva, string horarioReserva)
+    public void GuardarReservaAjax(int IdRestaurante, int IdCliente, DateTime fechaReserva, int personasReserva, string horarioReserva,int CantReservas)
     {
-        BD.AgregarReserva(IdRestaurante, IdCliente, fechaReserva, horarioReserva, personasReserva);
+        BD.AgregarReserva(IdRestaurante, IdCliente, fechaReserva, horarioReserva, personasReserva,CantReservas );
     }
 
     public void GuardarClienteContactado(Contacto contacto)
