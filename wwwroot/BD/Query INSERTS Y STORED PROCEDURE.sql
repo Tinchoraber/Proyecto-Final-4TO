@@ -55,7 +55,7 @@ BEGIN
 	SELECT * FROM Restaurante WHERE IdRestaurante = @IdRestaurante
 END
 
-alter PROCEDURE sp_GetInfoReseña
+create PROCEDURE sp_GetInfoReseña
 @IdRestaurante int
 AS 
 BEGIN
@@ -72,7 +72,7 @@ BEGIN
 	SELECT * FROM Reseña Where IdRestaurante = @IdRestaurante
 END
 
-ALTER PROCEDURE sp_GetListaReservaDeUnCliente
+create PROCEDURE sp_GetListaReservaDeUnCliente
 @IdCliente int
 AS 
 BEGIN
@@ -90,33 +90,20 @@ BEGIN
 	Where IdCliente = @IdCliente
 END
 
-ALTER PROCEDURE sp_Registro
+create PROCEDURE sp_Registro
 @Nombre varchar(50),
 @Apellido varchar(50),
 @Contraseña varchar(50),
-@Email varchar(50)
-AS 
-BEGIN
-	INSERT INTO Cliente(Nombre, Apellido, Contraseña, Email)
-	VALUES(@Nombre, @Apellido, @Contraseña, @Email)
-END
-
-ALTER PROCEDURE sp_Contacto
-@idCliente int,
-@Nombre varchar(50),
-@Apellido varchar(50),
-@Telefono int,
 @Email varchar(50),
-@Mensaje varchar(50)
-
+@TipoCliente bit
 AS 
 BEGIN
-	INSERT INTO Contacto(Nombre, Apellido,Telefono, Email, Mensaje, idCliente)
-	VALUES(@Nombre, @Apellido,@Telefono, @Email,@Mensaje, @idCliente )
+	INSERT INTO Cliente(Nombre, Apellido, Contraseña, Email, TipoCliente)
+	VALUES(@Nombre, @Apellido, @Contraseña, @Email,@TipoCliente)
 END
 
 
-ALTER PROCEDURE sp_VerificarCredenciales
+create PROCEDURE sp_VerificarCredenciales
 @Email varchar(50)
 AS
 BEGIN
@@ -124,7 +111,7 @@ BEGIN
 END
 
 
-alter PROCEDURE sp_AgregarReserva
+create PROCEDURE sp_AgregarReserva
 @IdRestaurante int, 
 @IdCliente int, 
 @FechaReserva date, 
@@ -139,14 +126,14 @@ END
 
 
 
-alter PROCEDURE sp_EliminarRestaurante
+create PROCEDURE sp_EliminarRestaurante
     @IdRestaurante INT
 AS
 BEGIN
         DELETE FROM Restaurante WHERE IdRestaurante = @IdRestaurante; 
 END;
 
-ALTER PROCEDURE sp_CalcularValoracionPromedio
+create PROCEDURE sp_CalcularValoracionPromedio
 @IdRestaurante INT
 AS
 BEGIN
