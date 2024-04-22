@@ -245,3 +245,22 @@
     }
 
   
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchButton = document.getElementById("searchButton");
+      searchButton.addEventListener("click", filterCardsByTitle);
+    });
+    
+    function filterCardsByTitle() {
+      const searchInput = document.getElementById("searchInput");
+      const searchValue = searchInput.value.trim().toLowerCase();
+    
+      const carta = document.querySelectorAll(".carta"); // Selecciona todas las tarjetasheis
+      carta.forEach((carta) => {
+          const title = carta.querySelector(".div-p-nombre p").textContent.toLowerCase(); // Obtén el título del restaurante
+          if (title.includes(searchValue)) {
+            carta.style.display = "block"; // Muestra la tarjeta si coincide con la búsqueda
+          } else {
+            carta.style.display = "none"; // Oculta la tarjeta si no coincide con la búsqueda
+          }
+      });
+    }

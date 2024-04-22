@@ -35,12 +35,7 @@
                   </ul>
             </li>
           </div>
-          
-
-  
-              
-
-               <form class="d-flex" role="search">
+              <form class="d-flex" role="search">
                 <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscá aqui" aria-label="Search">
                 <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
               </form>
@@ -56,8 +51,9 @@
         
         @foreach (Restaurante item in ViewBag.ListaRestaurantes)
         {
+          
           <div class="carta">
-            <div class="padre2">
+             <div class="padre2">
                
                     <img class="imgan" src="@item.Imagen" alt="">
                 <div class="div-p-nombre">
@@ -74,11 +70,10 @@
 
                     <a href='@Url.Action("VerMas", "Dennys", new{id = @item.IdRestaurante})' class="bot1">Ver Mas</a>
 
-	 @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
-                    {
-                        <a href='@Url.Action("EliminarRestaurante", "Dennys", new { idResto = @item.IdRestaurante })' class="bot1">Eliminar Restaurante</a>
-                    }	
-                 
+
+                  <a href='@Url.Action("EliminarRestaurante", "Dennys", new {idResto = @item.IdRestaurante})' class="bot1">Eliminar Restaurante</a>
+
+                    
                 </div>
             </div>
             </div>
