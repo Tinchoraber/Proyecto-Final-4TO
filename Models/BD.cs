@@ -90,7 +90,7 @@ public static class BD
         using(SqlConnection db = new SqlConnection(connectionString))
         {
             string sp = "sp_Registro";
-            db.Execute(sp, new{@Nombre = cliente.Nombre, @Apellido = cliente.Apellido,  @Email = cliente.Email, @Contraseña = cliente.Contraseña, @TipoCliente = cliente.TipoCliente}, 
+            db.Execute(sp, new{@Nombre = cliente.Nombre, @Apellido = cliente.Apellido,  @Email = cliente.Email, @Contraseña = cliente.Contraseña, @TipoCliente = cliente.TipoCliente ? 1 : 0}, 
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }
