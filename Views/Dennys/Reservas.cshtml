@@ -49,19 +49,20 @@
  </header>
 
 <main class="main-reseñas">
-    <div class="padre-reservas">
+   
         @if (ViewBag.NoReservas == true)
         {
-            <div class="alert alert-info p-5">
-                <h4 class="mb-3">Todavía no tienes reservas!!!</h4>
-                <p class="mb-4">¡Haz tu primera reserva ahora mismo!</p>
-                <a href='@Url.Action("Bienvenida", "Dennys")' class="btn btn-lg btn-primary">Ir a reservar</a>
+           <div class="alert alert-info p-5 centered-container">
+              <h4 class="mb-3">Todavía no tienes reservas!!!</h4>
+              <p class="mb-4">¡Haz tu primera reserva ahora mismo!</p>
+              <a href='@Url.Action("Bienvenida", "Dennys")' class="btn btn-lg btn-primary">Ir a reservar</a>
             </div>
         }
         else
-        {
+        { 
             @foreach (var item in ViewBag.ListaReservas)
             {
+              <div class="padre-reservas">
                 <div class="card-reseña">
                     <div class="">
                         <div class="div-imgd">
@@ -77,11 +78,13 @@
                             <a href='@Url.Action("EliminarReserva", "Dennys", new { idReserva = @item.IdReserva, idCliente = BD.user.IdCliente })' class="boton-reserva">Eliminar Reserva</a>
                         </div>
                     </div>
+                </div>  
                 </div>
                 indice = indice + 1;
+              
             }
         }
-    </div>
+    
 </main>
 
  

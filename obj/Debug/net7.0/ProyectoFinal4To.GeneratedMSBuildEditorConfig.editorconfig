@@ -9,75 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProyectoFinal4To
 build_property.RootNamespace = ProyectoFinal4To
-build_property.ProjectDir = C:\Users\47801169\Desktop\Proyecto-Final-4TO\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\MARCOS\OneDrive\Documentos\Proyecto-Final-4TO\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\47801169\Desktop\Proyecto-Final-4TO
+build_property.MSBuildProjectDirectory = C:\Users\MARCOS\OneDrive\Documentos\Proyecto-Final-4TO
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/AgregarRestaurante.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/AgregarRestaurante.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXEFncmVnYXJSZXN0YXVyYW50ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/ayuda.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/ayuda.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXGF5dWRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/Bienvenida.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/Bienvenida.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXEJpZW52ZW5pZGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/Home.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXEhvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/Login.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/RecuperarContraseña.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/RecuperarContraseña.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFJlY3VwZXJhckNvbnRyYXNlw7FhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/Registro.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFJlZ2lzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/Reservas.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/Reservas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFJlc2VydmFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/VerMas.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/VerMas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFZlck1hcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Dennys/VerReseñas.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Dennys/VerReseñas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVubnlzXFZlclJlc2XDsWFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Home/Index.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Shared/Error.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/_ViewImports.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/_ViewStart.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47801169/Desktop/Proyecto-Final-4TO/Views/Shared/_Layout.cshtml]
+[C:/Users/MARCOS/OneDrive/Documentos/Proyecto-Final-4TO/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1tf69bpqcj

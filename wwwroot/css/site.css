@@ -1118,9 +1118,6 @@ body {
   margin-bottom: 10px;
 }
 
-.rating {
-  display: flex;
-}
 
 .estrella {
   width: 20px;
@@ -1166,9 +1163,7 @@ body {
   border-radius: 8px;
 }
 
-#cuadroTexto {
-  margin-bottom: 20px;
-}
+
 
 textarea {
   width: 100%;
@@ -1178,9 +1173,6 @@ textarea {
   resize: vertical;
 }
 
-.contenedor-esterllas {
-  margin-bottom: 20px;
-}
 
 
 
@@ -1242,9 +1234,6 @@ textarea {
   resize: vertical;
 }
 
-.contenedor-esterllas {
-  margin-top: 10px;
-}
 
 
 
@@ -1266,6 +1255,12 @@ textarea {
 .btn-primary {
   background-color: #007bff;
   color: #fff;
+}
+.centered-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Media Query para pantallas pequeñas */
