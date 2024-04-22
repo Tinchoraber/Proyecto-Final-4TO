@@ -128,10 +128,23 @@ public IActionResult EliminarReserva(int idReserva, int idCliente)
 
 public IActionResult ObtenerReservas(int idCliente)
 {
-    ViewBag.ListaReservas = BD.GetListaReservaDeUnCliente(idCliente);
-    ViewBag.Restaurantes = BD.GetListaRestauranteReservaDeUnCliente(idCliente);
+    var reservas = BD.GetListaReservaDeUnCliente(idCliente);
+    
+    if (reservas == null || reservas.Count == 0)
+    {
+        // No hay reservas, establece un mensaje de alerta
+        ViewBag.NoReservas = true;
+    }
+    else
+    {
+        // Hay reservas, pasa los datos a la vista
+        ViewBag.ListaReservas = reservas;
+        ViewBag.Restaurantes = BD.GetListaRestauranteReservaDeUnCliente(idCliente);
+    }
+    
     return View("Reservas");
 }
+
 
 public IActionResult GuardarCliente(Cliente cliente)
 {

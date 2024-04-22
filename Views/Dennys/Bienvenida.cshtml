@@ -39,9 +39,7 @@
                 <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscá aqui" aria-label="Search">
                 <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
               </form>
-      
     </div>
-    
   </div>
 </nav>
  </header>
@@ -70,8 +68,11 @@
 
                     <a href='@Url.Action("VerMas", "Dennys", new{id = @item.IdRestaurante})' class="bot1">Ver Mas</a>
 
-
-                  <a href='@Url.Action("EliminarRestaurante", "Dennys", new {idResto = @item.IdRestaurante})' class="bot1">Eliminar Restaurante</a>
+                  @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+                    {
+                      <a href='@Url.Action("EliminarRestaurante", "Dennys", new {idResto = @item.IdRestaurante})' class="bot1">Eliminar Restaurante</a>
+                    }
+                  
 
                     
                 </div>
