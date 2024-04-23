@@ -782,11 +782,7 @@ nav {
 }
 
 /* Estilos para las estrellas de rating */
-.rating {
-    margin-top: 20px;
-    font-size: 30px; /* Tamaño de las estrellas */
-    
-}
+
 .contenedor-esterllas{
   display: flex;
   justify-content: center;
@@ -903,6 +899,7 @@ p strong {
   bottom: 5px;
   right: 5px;
   color: black;
+  padding: .1rem;
 }
 #contador.excedido {
   color: red;
@@ -962,9 +959,7 @@ p strong {
   margin-top: 2rem;
   padding: 1rem;
 }
-.div-imgd{
- 
-}
+
 .div-imgd img{
   width: 100%;
    border-radius: 10px 10px 0px 0px;
@@ -1049,10 +1044,7 @@ a{
     width: 30px;
     
 }
-.div-salir-VerMas{
-
-}
-.a-salir{
+alir{
   margin: 1rem;
 }
 body {
@@ -1080,7 +1072,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos de la sección de información del restaurante */
+
 .div-titulo {
   text-align: center;
   margin-bottom: 20px;
@@ -1091,10 +1083,10 @@ body {
 }
 
 .card {
-  width: 400px; /* Ancho aumentado */
+  width: 500px; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Centrar la card */
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -1130,11 +1122,7 @@ body {
   margin-top: 20px;
 }
 
-.padre-reseñas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
+
 
 .card-reseña {
   background-color: #f9f9f9;
@@ -1172,6 +1160,7 @@ textarea {
   border: 1px solid #ccc;
   resize: vertical;
 }
+
 
 
 
@@ -1264,3 +1253,6 @@ textarea {
 }
 
 /* Media Query para pantallas pequeñas */
+.div-salir-VerMas{
+  margin: 1rem;
+}
