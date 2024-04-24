@@ -1,17 +1,4 @@
 
-INSERT INTO Restaurante(Nombre, Direccion, HorarioApertura, HorarioClausura, FechaFundacion, Imagen, Descripcion) 
-VALUES('Kansas', 'Av. del Libertador 4625', '12:00', '00:00', '1999-06-09', 'https://buenosairesenvivo.com/wp-content/uploads/2023/08/unnamed-7.png', 'Kansas es un restaurant de Contemporary American Cuisine. El primer Restaurant fue inaugurado en Junio de 1999 en San Isidro. Nuestra visión es aportar alimentos de calidad en un ambiente placentero a través de un servicio excelente.'),
-	  ('Dean & Dennys', 'Malabia 1591', '10:00', '21:00', '2012-04-08', 'https://deananddennys.com/contenidos/1611864738.png', 'Dean & Dennys nace en Buenos Aires, Argentina, con la premisa de ofrecer hamburguesas y hot dogs de calidad premium, con locales de ambiente moderno, distendido y agradable.'), 
-	  ('KFC', 'Av. Corrientes 3201', '10:00', '23:00', '1952-09-24', 'https://assets.website-files.com/609c023f320888ea539cdc7e/60e4938c76307be2564c66fb_KFC_Website_SobreKFC_LegacyLogo.svg', 'KFC corporations, (Kentucky Fried Chicken) es la marca líder especializada en los productos de pollo con más de 17.000 restaurantes en todo el mundo con sede en Louisville.'), 
-	  ('Don Julio', 'Guatemala 4699', '11:00', '01:00', '1999-12-30', 'https://www.parrilladonjulio.com/images/logo.png', 'Don Julio se encuentra en el barrio porteño de Palermo y se destaca por servir cortes de carne premium a la parrilla, acompañados por vegetales y productos orgánicos de cada temporada -cultivados especialmente para el restaurante- y embutidos elaborados de manera artesanal.'), 
-	  ('El Ferroviario', 'Av. Reservistas Argentinos 219', '12:00', '23:00', '2006-05-24', 'https://elferroviarioparrilla.com/images/logo.png', 'Con el paso del tiempo y respondiendo a las peticiones de los comensales, se fueron incluyendo diversidad de platos y manjares. Se incorporaron al menú carnes asadas, guarniciones, pastas, picadas, postres elaborados, carnes exóticas, vinos de todas las gamas y tragos lo que llevó al pequeño buffet del Club a convertirse en el Restaurante- Parrilla tan famoso que hoy conocemos, con su característica fidelidad por las tradiciones nacionales.')
-
-
-
-
-
-
-
 
 CREATE PROCEDURE sp_AgregarRestaurante
 @NomRestaurante varchar(50),
@@ -20,11 +7,12 @@ CREATE PROCEDURE sp_AgregarRestaurante
 @HoraClausura varchar(50),
 @FechaFunda date,
 @Img varchar(500), 
-@Descripcionn varchar(500)
+@Descripcionn varchar(500), 
+@IdCliente int
 AS 
 BEGIN
-	INSERT INTO Restaurante(Nombre, Direccion, HorarioApertura, HorarioClausura, FechaFundacion, Imagen, Descripcion)
-	VALUES(@NomRestaurante, @Direccionn, @HoraApertura, @HoraClausura, @FechaFunda, @Img, @Descripcionn)
+	INSERT INTO Restaurante(Nombre, Direccion, HorarioApertura, HorarioClausura, FechaFundacion, Imagen, Descripcion, idCliente)
+	VALUES(@NomRestaurante, @Direccionn, @HoraApertura, @HoraClausura, @FechaFunda, @Img, @Descripcionn, @IdCliente)
 END
 
 
@@ -78,7 +66,7 @@ AS
 BEGIN
 	SELECT Rese.*, Rest.Nombre as NombreRestaurante, Rest.Imagen AS Imagen FROM Reserva Rese
 	INNER JOIN Restaurante Rest ON Rese.IdRestaurante = Rest.IdRestaurante
-	Where IdCliente = @IdCliente
+	Where Rese.IdCliente = @IdCliente
 END
 
 create PROCEDURE sp_GetListaRestauranteReservaDeUnCliente
@@ -87,10 +75,10 @@ AS
 BEGIN
 	SELECT Rest.Imagen FROM Reserva Rese
 	INNER JOIN Restaurante Rest ON Rese.IdRestaurante = Rest.IdRestaurante
-	Where IdCliente = @IdCliente
+	Where Rese.IdCliente = @IdCliente
 END
 
-create PROCEDURE sp_Registro
+alter PROCEDURE sp_Registro
 @Nombre varchar(50),
 @Apellido varchar(50),
 @Contraseña varchar(50),
@@ -153,3 +141,11 @@ BEGIN
 END;
 
 select IdRestaurante from Reseña where IdRestaurante = 6 
+
+
+CREATE PROCEDURE sp_GetRestauranteFromCliente
+@IdCliente int
+AS 
+BEGIN
+	SELECT * FROM Restaurante WHERE idCliente = @IdCliente
+END

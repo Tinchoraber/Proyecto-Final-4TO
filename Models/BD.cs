@@ -2,7 +2,7 @@ using System.Data.SqlClient;
 using Dapper;
 public static class BD
 {
-    private static string connectionString = @"Server=DESKTOP-OF64MA2\SQLEXPRESS;DataBase=ReservaRestaurantes;Trusted_Connection=True;";
+    private static string connectionString = @"Server=LAPTOP-UC1S74ID\SQLEXPRESS;DataBase=ReservaRestaurantes;Trusted_Connection=True;";
     public static Cliente user = null;
 
     public static void AgregarRestaurante(Restaurante resto)
@@ -10,7 +10,7 @@ public static class BD
         using(SqlConnection db = new SqlConnection(connectionString))
         {
             string sp = "sp_AgregarRestaurante";
-            db.Execute(sp, new{@NomRestaurante = resto.Nombre, @Direccionn = resto.Direccion, @HoraApertura = resto.HorarioApertura, @HoraClausura = resto.HorarioClausura, @FechaFunda = resto.FechaFundacion, @Img = resto.Imagen, @Descripcionn = resto.Descripcion}, 
+            db.Execute(sp, new{@NomRestaurante = resto.Nombre, @Direccionn = resto.Direccion, @HoraApertura = resto.HorarioApertura, @HoraClausura = resto.HorarioClausura, @FechaFunda = resto.FechaFundacion, @Img = resto.Imagen, @Descripcionn = resto.Descripcion, @IdCliente = resto.idCliente}, 
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }
@@ -169,5 +169,15 @@ public static class BD
         }
        
 }
-   
+       public static Restaurante GetRestauranteFromCliente(int idCliente)
+{
+        Restaurante restaurante = null; 
+        using(SqlConnection db = new SqlConnection(connectionString))
+    {
+        string sp = "sp_GetRestauranteFromCliente";
+        restaurante = db.QueryFirstOrDefault<Restaurante>(sp, new{@IdCliente = idCliente}, 
+        commandType: System.Data.CommandType.StoredProcedure);
+    }
+    return restaurante;
+}
 }
