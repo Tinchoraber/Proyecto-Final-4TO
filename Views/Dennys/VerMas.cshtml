@@ -12,10 +12,14 @@
        
 
         <div class="card">
-    
     <img src="@ViewBag.InfoRes.Imagen" class="card-img-top" alt="Imagen del restaurante">
     <div class="card-body">
         <p class="card-text"><strong>Dirección:</strong> @ViewBag.InfoRes.Direccion</p>
+        <!-- Agregar el enlace a Google Maps -->
+        @{
+            string direccionCodificada = System.Web.HttpUtility.UrlEncode(ViewBag.InfoRes.Direccion);
+        }
+        <p class="card-text"><a href="https://www.google.com/maps/search/?api=1&query=@direccionCodificada" target="_blank">Ver ubicacion</a></p>
         <p class="card-text"><strong>Fecha de Fundación:</strong> @ViewBag.InfoRes.FechaFundacion</p>
         <p class="card-text"><strong>Horario de Apertura:</strong> @ViewBag.InfoRes.HorarioApertura</p>
         <p class="card-text"><strong>Horario de Clausura:</strong> @ViewBag.InfoRes.HorarioClausura</p>
@@ -29,8 +33,6 @@
             }
         </div>
     </div>
-
-   
 </div>
 
 

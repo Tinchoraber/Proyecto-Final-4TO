@@ -46,11 +46,7 @@ public class DennysController : Controller
         BD.AgregarReserva(IdRestaurante, IdCliente, fechaReserva, horarioReserva, personasReserva,CantReservas );
     }
 
-    public void GuardarClienteContactado(Contacto contacto)
-    {
-        contacto.IdCliente = BD.user.IdCliente;
-        BD.AgregarCliente(contacto);    
-    }
+   
     
 
    public IActionResult IniciarSesion(string Email, string Contraseña)
