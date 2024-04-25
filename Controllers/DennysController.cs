@@ -24,13 +24,9 @@ public class DennysController : Controller
     public IActionResult Bienvenida()
     {
         ViewBag.Cliente = BD.user;
-        if(ViewBag.Cliente.TipoCliente == false){
-            ViewBag.ListaRestaurantes = BD.GetListaRestaurantes();
-        }
-        else{
-            ViewBag.ListaRestaurantes = BD.GetRestauranteFromCliente(BD.user.IdCliente);
-        }
-       
+        ViewBag.ListaRestaurantes = BD.GetListaRestaurantes();
+        ViewBag.RestaurantesCliente = BD.GetRestauranteFromCliente(BD.user.IdCliente);
+        ViewBag.CantidadResto = BD.VerificarSiExisteRestaurante(BD.user.IdCliente);
         return View("Bienvenida");
     }
     
@@ -68,6 +64,9 @@ public class DennysController : Controller
         }
         else
         {
+            if(BD.VerificarSiExisteRestaurante(cliente.IdCliente) > 0){
+                return RedirectToAction("Bienvenida");
+            }
             return RedirectToAction("AgregarRestaurante");
         }
     }

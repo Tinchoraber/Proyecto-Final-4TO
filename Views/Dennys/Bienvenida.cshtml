@@ -23,13 +23,6 @@
                 </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Tu Reserva</a></li>
-                    
-                    @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
-                    {
-                      <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
-                    }
-                    
-                    
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesion</a></li>
                   </ul>
@@ -46,39 +39,57 @@
 <main class="cuerpo">
 @Html.Hidden("IdRestaurante")
     <div class="primeras3">
-        
-        @foreach (Restaurante item in ViewBag.ListaRestaurantes)
-        {
-          
-          <div class="carta">
-             <div class="padre2">
-               
-                    <img class="imgan" src="@item.Imagen" alt="">
-                <div class="div-p-nombre">
-                    <p>@item.Nombre</p>
-                </div>
-                <div class="div-p-Direccion">
-                    <p>@item.Direccion</p>
-                </div>
+          @if(ViewBag.Cliente.TipoCliente == true){
+              <div class="carta">
+                    <div class="padre2">
+                        <img class="imgan" src="@ViewBag.RestaurantesCliente.Imagen" alt="">
+                      <div class="div-p-nombre">
+                        <p>@ViewBag.RestaurantesCliente.Nombre</p>
+                      </div>
+                      <div class="div-p-Direccion">
+                        <p>@ViewBag.RestaurantesCliente.Direccion</p>
+                      </div>
 
-                <div class="btns">
-                    <div class="btn3">
-                        <button type="button" class="bot2" data-bs-toggle="modal" data-bs-target="#ModalReserva" onclick="cargarIdRestaurante(@item.IdRestaurante)">Reservar</button>
-                    </div>
+                      <div class="btns">
+                          <a href='@Url.Action("VerMas", "Dennys", new{id = @ViewBag.RestaurantesCliente.IdRestaurante})' class="bot1">Ver Mas</a>
+                        @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+                          {
+                            <a href='@Url.Action("EliminarRestaurante", "Dennys", new {idResto = @ViewBag.RestaurantesCliente.IdRestaurante})' class="bot1">Eliminar Restaurante</a>
+                          }
+                      </div>
+                  </div>
+              </div>
+            }
+            else
+            {
+              @foreach (var item in ViewBag.ListaRestaurantes)
+              {
+                  <div class="carta">
+                        <div class="padre2">
+                            <img class="imgan" src="@item.Imagen" alt="">
+                          <div class="div-p-nombre">
+                            <p>@item.Nombre</p>
+                          </div>
+                          <div class="div-p-Direccion">
+                            <p>@item.Direccion</p>
+                          </div>
 
-                    <a href='@Url.Action("VerMas", "Dennys", new{id = @item.IdRestaurante})' class="bot1">Ver Mas</a>
+                          <div class="btns">
+                              <div class="btn3">
+                                  <button type="button" class="bot2" data-bs-toggle="modal" data-bs-target="#ModalReserva" onclick="cargarIdRestaurante(@item.IdRestaurante)">Reservar</button>
+                              </div>
 
-                  @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
-                    {
-                      <a href='@Url.Action("EliminarRestaurante", "Dennys", new {idResto = @item.IdRestaurante})' class="bot1">Eliminar Restaurante</a>
-                    }
-                  
+                              <a href='@Url.Action("VerMas", "Dennys", new{id = @item.IdRestaurante})' class="bot1">Ver Mas</a>
 
-                    
-                </div>
-            </div>
-            </div>
-        }
+                            @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+                              {
+                                <a href='@Url.Action("EliminarRestaurante", "Dennys", new {idResto = @item.IdRestaurante})' class="bot1">Eliminar Restaurante</a>
+                              }
+                          </div>
+                      </div>
+                  </div>
+              }
+            }
     </div>
 </main>
 
@@ -97,7 +108,7 @@
           <div class="imgs-flex">
             <img class="p"  src="../IMG/calendario.png" onclick="Calendario()" alt="">
             <img class="p" src="../IMG/personas.png" onclick="SeleccionarCantidadPersonas()" alt="">
-            <img class="p" src="../IMG/reloj.png" onclick="SeleccionarHorario()" alt="">
+            <img class="p" src="../IMG/reloj.png" onclick="SeleccionarHorario()" alt="reloj">
             </div>
            
           </form>

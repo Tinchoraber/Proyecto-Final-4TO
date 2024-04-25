@@ -2,7 +2,7 @@ using System.Data.SqlClient;
 using Dapper;
 public static class BD
 {
-    private static string connectionString = @"Server=LAPTOP-UC1S74ID\SQLEXPRESS;DataBase=ReservaRestaurantes;Trusted_Connection=True;";
+    private static string connectionString = @"Server=localhost;DataBase=ReservaRestaurantes;Trusted_Connection=True;";
     public static Cliente user = null;
 
     public static void AgregarRestaurante(Restaurante resto)
@@ -180,4 +180,13 @@ public static class BD
     }
     return restaurante;
 }
+public static int VerificarSiExisteRestaurante(int idCliente)
+    {
+        using(SqlConnection db = new SqlConnection(connectionString))
+        {
+            string sp = "sp_VerificarSiExisteRestaurante";
+            return db.QueryFirstOrDefault<int>(sp,new{@IdCliente = idCliente}, 
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
 }

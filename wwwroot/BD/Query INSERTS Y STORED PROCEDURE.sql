@@ -149,3 +149,12 @@ AS
 BEGIN
 	SELECT * FROM Restaurante WHERE idCliente = @IdCliente
 END
+
+CREATE PROCEDURE sp_VerificarSiExisteRestaurante
+@IdCliente int
+AS
+BEGIN
+	SELECT COUNT(R.idCliente) FROM Restaurante R
+	INNER JOIN Cliente C ON R.idCliente = C.IdCliente
+	WHERE R.idCliente = @IdCliente
+END
