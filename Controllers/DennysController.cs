@@ -133,6 +133,17 @@ public IActionResult EliminarReserva(int idReserva, int idCliente)
     return View("Reservas");
 }
 
+public IActionResult EliminarReseña(int IdComentario, int idCliente)
+{
+    BD.EliminarReseña(IdComentario);
+    ViewBag.InfoRes = BD.GetInfoRestaurante(idCliente);
+    ViewBag.ListaReseñas = BD.GetListaReseñasDeUnRestaurante(idCliente);
+    ViewBag.InfoReseñas = BD.GetInfoReseña(idCliente);
+    ViewBag.ValoracionPromedio = BD.calcularValoracionPromedio(idCliente);
+    return View("VerMas");
+}
+
+
 public IActionResult ObtenerReservas(int idCliente)
 {
     var reservas = BD.GetListaReservaDeUnCliente(idCliente);

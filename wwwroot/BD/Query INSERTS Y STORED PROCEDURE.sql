@@ -16,14 +16,14 @@ BEGIN
 END
 
 
-CREATE PROCEDURE sp_AgregarReseña
+CREATE PROCEDURE sp_AgregarReseï¿½a
 @IdResto int,
 @IdClient int,
 @Comment varchar(500),
 @Valoracion int
 AS 
 BEGIN
-	INSERT INTO Reseña(IdRestaurante, IdCliente, Comentario, Valoracion)
+	INSERT INTO Reseï¿½a(IdRestaurante, IdCliente, Comentario, Valoracion)
 	VALUES(@IdResto, @IdClient, @Comment, @Valoracion)
 END
 
@@ -43,21 +43,21 @@ BEGIN
 	SELECT * FROM Restaurante WHERE IdRestaurante = @IdRestaurante
 END
 
-create PROCEDURE sp_GetInfoReseña
+create PROCEDURE sp_GetInfoReseï¿½a
 @IdRestaurante int
 AS 
 BEGIN
-	SELECT R.Valoracion, R.Comentario, C.Nombre as Nombre, C.Apellido FROM Reseña R
+	SELECT R.Valoracion, R.Comentario, C.Nombre as Nombre, C.Apellido FROM Reseï¿½a R
 	INNER JOIN Cliente C ON R.IdCliente = C.IdCliente
 	WHERE R.IdRestaurante = @IdRestaurante
 END
 
 
-CREATE PROCEDURE sp_GetListaReseñasDeUnRestaurante
+CREATE PROCEDURE sp_GetListaReseï¿½asDeUnRestaurante
 @IdRestaurante int
 AS 
 BEGIN
-	SELECT * FROM Reseña Where IdRestaurante = @IdRestaurante
+	SELECT * FROM Reseï¿½a Where IdRestaurante = @IdRestaurante
 END
 
 create PROCEDURE sp_GetListaReservaDeUnCliente
@@ -81,13 +81,13 @@ END
 alter PROCEDURE sp_Registro
 @Nombre varchar(50),
 @Apellido varchar(50),
-@Contraseña varchar(50),
+@Contraseï¿½a varchar(50),
 @Email varchar(50),
 @TipoCliente bit
 AS 
 BEGIN
-	INSERT INTO Cliente(Nombre, Apellido, Contraseña, Email, TipoCliente)
-	VALUES(@Nombre, @Apellido, @Contraseña, @Email,@TipoCliente)
+	INSERT INTO Cliente(Nombre, Apellido, Contraseï¿½a, Email, TipoCliente)
+	VALUES(@Nombre, @Apellido, @Contraseï¿½a, @Email,@TipoCliente)
 END
 
 
@@ -125,13 +125,13 @@ create PROCEDURE sp_CalcularValoracionPromedio
 @IdRestaurante INT
 AS
 BEGIN
-	SELECT AVG(Valoracion) as ValoracionPromedio FROM Reseña R
+	SELECT AVG(Valoracion) as ValoracionPromedio FROM Reseï¿½a R
 	INNER JOIN Restaurante RE ON R.IdRestaurante = RE.IdRestaurante
 	WHERE R.IdRestaurante = @IdRestaurante
 	GROUP BY RE.Nombre
 END;
 
-Select * from Reseña;
+Select * from Reseï¿½a;
 
 CREATE PROCEDURE sp_EliminarReserva
     @IdReserva INT
@@ -140,7 +140,7 @@ BEGIN
         DELETE FROM Reserva WHERE IdReserva = @IdReserva; 
 END;
 
-select IdRestaurante from Reseña where IdRestaurante = 6 
+select IdRestaurante from Reseï¿½a where IdRestaurante = 6 
 
 
 CREATE PROCEDURE sp_GetRestauranteFromCliente
@@ -158,3 +158,11 @@ BEGIN
 	INNER JOIN Cliente C ON R.idCliente = C.IdCliente
 	WHERE R.idCliente = @IdCliente
 END
+
+CREATE PROCEDURE sp_EliminarReseï¿½a
+    @IdComentario INT
+AS
+BEGIN
+        DELETE FROM Reseï¿½a WHERE IdComentario = @IdComentario; 
+END;
+

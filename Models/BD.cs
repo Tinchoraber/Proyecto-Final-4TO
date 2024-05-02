@@ -125,6 +125,17 @@ public static class BD
             db.Execute(sp, new{@IdReserva = IdReserva}, 
             commandType: System.Data.CommandType.StoredProcedure);
         }
+        
+    }
+
+    public static void EliminarReseña(int IdComentario)
+    {
+        using(SqlConnection db = new SqlConnection(connectionString))
+        {
+            string sp = "sp_EliminarReseña";
+            db.Execute(sp, new{@IdComentario = IdComentario}, 
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
     }
     public static List<Reserva> GetListaReservaDeUnCliente(int idCliente)
     {
