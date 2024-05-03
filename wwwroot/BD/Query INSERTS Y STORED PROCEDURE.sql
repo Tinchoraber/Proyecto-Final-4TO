@@ -159,10 +159,10 @@ BEGIN
 	WHERE R.idCliente = @IdCliente
 END
 
-CREATE PROCEDURE sp_EliminarRese�a
+CREATE PROCEDURE sp_EliminarReseña
     @IdComentario INT
 AS
 BEGIN
-        DELETE FROM Rese�a WHERE IdComentario = @IdComentario; 
+        DELETE FROM Reseña WHERE IdComentario = @IdComentario; 
 END;
 
