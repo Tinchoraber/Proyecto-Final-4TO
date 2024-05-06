@@ -22,26 +22,26 @@
                   Funcionalidades
                 </a>
                   <ul class="dropdown-menu">
+                  @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
                     <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Tu Reserva</a></li>
-                    
-                    @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
-                    {
-                      <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
-                    }
-                    
-                    
+                  }
+                  else{
+                     <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Reservas</a></li>
+                  }
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesion</a></li>
                   </ul>
             </li>
           </div>
-          
 
-  
-      
-      
+          @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscá aqui" aria-label="Search">
+                <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
+              </form>
+              }
+             
     </div>
-    
   </div>
 </nav>
  </header>

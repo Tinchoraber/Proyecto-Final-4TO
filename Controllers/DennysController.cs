@@ -45,7 +45,7 @@ public class DennysController : Controller
     
     public void GuardarReservaAjax(int IdRestaurante, int IdCliente, DateTime fechaReserva, int personasReserva, string horarioReserva,int CantReservas)
     {
-        BD.AgregarReserva(IdRestaurante, IdCliente, fechaReserva, horarioReserva, personasReserva,CantReservas );
+        BD.AgregarReserva(IdRestaurante, IdCliente, fechaReserva, horarioReserva, personasReserva,CantReservas);
     }
 
    
@@ -130,6 +130,7 @@ public IActionResult EliminarReserva(int idReserva, int idCliente)
     BD.EliminarReserva(idReserva);
     ViewBag.ListaReservas = BD.GetListaReservaDeUnCliente(idCliente);
     ViewBag.Restaurantes = BD.GetListaRestauranteReservaDeUnCliente(idCliente);
+    ViewBag.Cliente = BD.user;
     return View("Reservas");
 }
 
@@ -146,18 +147,24 @@ public IActionResult EliminarReseña(int IdComentario, int idCliente)
 
 public IActionResult ObtenerReservas(int idCliente)
 {
-    var reservas = BD.GetListaReservaDeUnCliente(idCliente);
-    
-    if (reservas == null || reservas.Count == 0)
-    {
-        ViewBag.NoReservas = true;
+   ViewBag.Cliente = BD.user;
+    if(BD.user.TipoCliente == true){
+         ViewBag.Restaurantes = BD.GetListaRestauranteReservaDeUnCliente(idCliente);
+        if (ViewBag.Restaurantes == null || ViewBag.Restaurantes.Count == 0)
+        {
+            ViewBag.NoReservas = true;
+        }
     }
-    else
-    {
-        ViewBag.ListaReservas = reservas;
-        ViewBag.Restaurantes = BD.GetListaRestauranteReservaDeUnCliente(idCliente);
+    else{
+        var reservas = BD.GetListaReservaDeUnCliente(idCliente);
+        if (reservas == null || reservas.Count == 0)
+        {
+            ViewBag.NoReservas = true;
+        }
+        else{
+            ViewBag.ListaReservas = reservas;
+        }
     }
-    
     return View("Reservas");
 }
 
