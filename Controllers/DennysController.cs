@@ -122,7 +122,7 @@ public IActionResult GuardarRestaurante(Restaurante resto)
 public IActionResult EliminarRestaurante(int idResto)
 {
     BD.EliminarRestaurante(idResto);
-    return RedirectToAction("Bienvenida");
+    return RedirectToAction("AgregarRestaurante");
 }
 
 public IActionResult EliminarReserva(int idReserva, int idCliente)
@@ -150,12 +150,10 @@ public IActionResult ObtenerReservas(int idCliente)
     
     if (reservas == null || reservas.Count == 0)
     {
-        // No hay reservas, establece un mensaje de alerta
         ViewBag.NoReservas = true;
     }
     else
     {
-        // Hay reservas, pasa los datos a la vista
         ViewBag.ListaReservas = reservas;
         ViewBag.Restaurantes = BD.GetListaRestauranteReservaDeUnCliente(idCliente);
     }

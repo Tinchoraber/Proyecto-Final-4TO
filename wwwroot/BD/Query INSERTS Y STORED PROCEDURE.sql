@@ -114,11 +114,13 @@ END
 
 
 
-create PROCEDURE sp_EliminarRestaurante
+alter PROCEDURE sp_EliminarRestaurante
     @IdRestaurante INT
 AS
 BEGIN
-        DELETE FROM Restaurante WHERE IdRestaurante = @IdRestaurante; 
+		DELETE From Reseña WHERE IdRestaurante=@IdRestaurante;
+        DELETE FROM Restaurante WHERE IdRestaurante = @IdRestaurante;
+		
 END;
 
 create PROCEDURE sp_CalcularValoracionPromedio
