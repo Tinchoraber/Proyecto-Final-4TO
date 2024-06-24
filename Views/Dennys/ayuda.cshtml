@@ -90,8 +90,8 @@
 
 
         </div>
-        
-        <div class="servicio-padre">
+        @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
+          <div class="servicio-padre">
           <div class="contenedor-ayuda">
           <div class="title-servicio">
             <h2>Como agrego un restaurante?</h2>
@@ -105,7 +105,12 @@
                 </div>
                 </div>        </div>
         </div>
+       
+        
+
+
       </div>
+       }
 
       <div class="consulta-padre">
         <div class="contenedor-consulta">
