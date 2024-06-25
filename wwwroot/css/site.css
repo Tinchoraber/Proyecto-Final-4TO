@@ -531,9 +531,7 @@ nav {
  .bot1 span:last-child {
   display: none;
  }
- .span-reservas{
-  font-weight: bold;
- }
+ 
  
  .bot1:hover {
   transition: .4s;
@@ -914,14 +912,7 @@ p strong {
 .main-reseñas {
   text-align: center;
 }
-.padre-reservas{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-  
-  grid-gap: 40px;
-  margin-top: 2rem;
-  padding: 1rem;
-}
+
 @media screen and (max-width:1308px) {
   .padre-reservas{
     grid-template-columns: 1fr 1fr  ;
@@ -943,14 +934,12 @@ p strong {
 .a-btn-reservas{
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 1rem;
+  width: 100%;
+  text-align: center;
 }
-.dentro-reserva{
-  padding: 20px; 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
+
 .padre-reseñas {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
@@ -960,10 +949,7 @@ p strong {
   padding: 1rem;
 }
 
-.div-imgd img{
-  width: 100%;
-   border-radius: 10px 10px 0px 0px;
-}
+
 .card-reseña {
   background-color: #fff;
   border-radius: 8px; 
@@ -1328,4 +1314,39 @@ textarea {
     transform: translate(0%, 0%);
     opacity: 1;
   }
+}
+.main-reservas{
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+}
+.padre-reservas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.div-padre2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.div-imgd{
+  display: flex;
+  justify-content: center;
+}
+.div-imgd img{
+  width: 80%;
+}
+
+.dentro-reserva{
+  padding: 20px; 
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }

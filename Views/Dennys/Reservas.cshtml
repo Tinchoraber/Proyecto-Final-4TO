@@ -1,109 +1,134 @@
 @{
-  int indice = 0;
+
+    int indice = 0; 
 }
 
-<header>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-<a href='@Url.Action("Bienvenida", "Dennys")'><img src="../IMG/logo-dennys.png" alt="Logo"></a>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="items-navegador">
 
-        <div class="navbar-item">
-            <a class="linkk"  href='@Url.Action("Bienvenida", "Dennys")'>Inicio</a>
-          </div>
-
-          <div class="navbar-item">
-            <a class="linkk" href='@Url.Action("Ayuda", "Dennys")'>Ayuda</a>
-          </div>
-
-          <div class="navbar-item">
-             <li class="nav-item dropdown">
-                <a class="linkk dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Funcionalidades
-                </a>
-                  <ul class="dropdown-menu">
-                  @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
-                    <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Tu Reserva</a></li>
-                  }
-                  else{
-                     <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Reservas</a></li>
-                  }
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesion</a></li>
-                  </ul>
-            </li>
-          </div>
-
-          @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscá aqui" aria-label="Search">
-                <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
-              </form>
-              }
-             
-    </div>
-  </div>
-</nav>
- </header>
-
-<main class="main-reseñas">
-    @if(ViewBag.Cliente.TipoCliente == true){
-        @if (ViewBag.NoReservas == true)
-        {
-           <div class="alert alert-info p-5 centered-container">
-              <h4 class="mb-3">Todavía no tienes reservas!!!</h4>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a href='@Url.Action("Bienvenida", "Dennys")'><img src="../IMG/logo-dennys.png" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="items-navegador">
+                        <div class="navbar-item">
+                            <a class="linkk" href='@Url.Action("Bienvenida", "Dennys")'>Inicio</a>
+                        </div>
+                        <div class="navbar-item">
+                            <a class="linkk" href='@Url.Action("Ayuda", "Dennys")'>Ayuda</a>
+                        </div>
+                        <div class="navbar-item">
+                            <li class="nav-item dropdown">
+                                <a class="linkk dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Funcionalidades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false)
+                                    {
+                                        <li><a class="dropdown-item" href='@Url.Action("ObtenerReservas", "Dennys", new { idCliente = ViewBag.Cliente.IdCliente })'>Tu Reserva</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a class="dropdown-item" href='@Url.Action("ObtenerReservas", "Dennys", new { idCliente = ViewBag.Cliente.IdCliente })'>Reservas</a></li>
+                                    }
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false)
+                        {
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscar aquí" aria-label="Search">
+                                <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
+                            </form>
+                        }
+                    </div>
+                </div>
             </div>
+        </nav>
+    </header>
+  <h1>Tus reservas</h1>
+    <main class="main-reservas">
+        @if(ViewBag.Cliente != null)
+        {
+            @if(ViewBag.Cliente.TipoCliente == true)
+            {
+                @if(ViewBag.NoReservas == true)
+                {
+                    <div class="alert alert-info p-5 centered-container">
+                        <h4 class="mb-3">¡Todavía no tienes reservas!</h4>
+                    </div>
+                }
+                else
+                {
+                    @if(ViewBag.Restaurantes != null)
+                    {
+                      
+                        @foreach (var item in ViewBag.Restaurantes)
+                        {
+                            <div class="padre-reservas">
+                             
+                                <div class="card-reserva">
+                                    
+                                        <div class="div-imgd">
+                                            <img src="@item.Imagen" alt="">
+                                        </div>
+                                        <div class="div-padre2">
+                                        <div class="dentro-reserva">
+                                            <p><span class="span-reservas">Fecha:</span> @item.FechaReserva.ToShortDateString()</p>
+                                            <p><span class="span-reservas">Hora:</span> @item.HoraReserva</p>
+                                            <p><span class="span-reservas">Cantidad de Personas:</span> @item.CantidadPersonas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div>No hay restaurantes disponibles.</div>
+                    }
+                }
+            }
+            else
+            {
+                @if(ViewBag.ListaReservas != null)
+                { 
+                    @foreach (var item in ViewBag.ListaReservas)
+                    {
+                        <div class="padre-reservas">
+                            <div class="card-reseña">
+                                <div>
+                                    <div class="div-imgd">
+                                        <img src="@item.Imagen" alt="">
+                                    </div>
+                                    <div class="dentro-reserva">
+                                        <p><span class="span-reservas">Lugar:</span> @item.NombreRestaurante</p>
+                                        <p><span class="span-reservas">Fecha:</span> @item.FechaReserva.ToShortDateString()</p>
+                                        <p><span class="span-reservas">Hora:</span> @item.HoraReserva</p>
+                                        <p><span class="span-reservas">Cantidad de Personas:</span> @item.CantidadPersonas</p>
+                                    </div>
+                                    <div class="a-btn-reservas">
+                                        <a href='@Url.Action("EliminarReserva", "Dennys", new { idReserva = item.IdReserva, idCliente = ViewBag.Cliente.IdCliente })' class="boton-reserva">Eliminar Reserva</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div>No hay reservas disponibles.</div>
+                }
+            }
         }
         else
-        { 
-            @foreach (var item in ViewBag.Restaurantes)
-            {
-              <div class="padre-reservas">
-                <div class="card-reseña">
-                    <div class="">
-                        <div class="div-imgd">
-                            <img src="@item.Imagen" alt="">
-                        </div>
-                        <div class="dentro-reserva">
-                            <p><span class="span-reservas">Fecha:</span> @item.FechaReserva.ToShortDateString()</p>
-                            <p><span class="span-reservas">Hora:</span> @item.HoraReserva</p>
-                            <p><span class="span-reservas">Cantidad de Personas:</span> @item.CantidadPersonas</p>
-                        </div>
-                    </div>
-                </div>  
-                </div>        
-            }
+        {
+            <div>No se encontró el cliente.</div>
         }
-    }
-    else{
-      @foreach (var item in ViewBag.ListaReservas)
-            {
-              <div class="padre-reservas">
-                <div class="card-reseña">
-                    <div class="">
-                        <div class="div-imgd">
-                            <img src="@item.Imagen" alt="">
-                        </div>
-                        <div class="dentro-reserva">
-                            <p><span class="span-reservas">Lugar:</span> @item.NombreRestaurante</p>
-                            <p><span class="span-reservas">Fecha:</span> @item.FechaReserva.ToShortDateString()</p>
-                            <p><span class="span-reservas">Hora:</span> @item.HoraReserva</p>
-                            <p><span class="span-reservas">Cantidad de Personas:</span> @item.CantidadPersonas</p>
-                        </div>
-                        <div class="a-btn-reservas">
-                            <a href='@Url.Action("EliminarReserva", "Dennys", new { idReserva = @item.IdReserva, idCliente = BD.user.IdCliente })' class="boton-reserva">Eliminar Reserva</a>
-                        </div>
-                    </div>
-                </div>  
-                </div>  
-            }
-    }
-        
-    
-</main>
+    </main>
 
- 
