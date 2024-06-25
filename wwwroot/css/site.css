@@ -381,6 +381,7 @@ nav {
 }
 .sa:hover{
   background-color: red;
+  color: white;
 }
 .navbar-expand-lg .navbar-collapse {
   justify-content: end;
@@ -510,18 +511,7 @@ nav {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .4s;
  }
- .boton-reserva{
-  background-color: rgb(255, 80, 80);
-  padding: 10px 10px;
-  color: #fff;
  
-  letter-spacing: .1px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  width:50%;
- }
  @media screen and (max-width:375px) {
   .boton-reserva{
     padding: 12px 4px;
@@ -931,14 +921,6 @@ p strong {
   }
   
 }
-.a-btn-reservas{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  width: 100%;
-  text-align: center;
-}
 
 .padre-reseñas {
   display: grid;
@@ -1066,6 +1048,7 @@ body {
 
 .h1 {
   color: #333;
+  text-align: center;
 }
 
 .card {
@@ -1316,37 +1299,64 @@ textarea {
   }
 }
 .main-reservas{
-  display: flex;
-  justify-content: center;
-  
-  align-items: center;
-}
-.padre-reservas{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-.div-padre2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-}
-.div-imgd{
-  display: flex;
-  justify-content: center;
-}
-.div-imgd img{
-  width: 80%;
-}
-
-.dentro-reserva{
-  padding: 20px; 
   display: grid;
-  justify-content: center;
-  align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+.padre-reservas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  text-align: center;
+
+
+  background-color: #fff;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 10px;
+
+  padding: 1rem;
+}
+
+.div-imgd img{
+  width: 70%;
+}
+.a-btn-reservas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.dentro-reserva{
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.boton-reserva{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(255, 80, 80);
+  padding: 10px 10px;
+  color: #fff;
+ 
+  letter-spacing: .1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  
+ }
+.span-reservas{
+  font-weight: bold;
+}
+
+ 
+
+
+
+
+

@@ -100,6 +100,7 @@ public IActionResult RecuperarContraseña(string email)
 }
 public IActionResult VerMas(int id)
 {
+    ViewBag.Cliente = BD.user;
     Restaurante restaurante = BD.GetInfoRestaurante(id);
     ViewBag.InfoRes = restaurante;
     ViewBag.ListaReseñas = BD.GetListaReseñasDeUnRestaurante(id);

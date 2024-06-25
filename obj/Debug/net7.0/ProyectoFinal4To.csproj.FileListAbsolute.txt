@@ -434,7 +434,6 @@ C:\Users\mrabe\OneDrive\Escritorio\ORT\Proyecto-Final-4TO\obj\Debug\net7.0\refin
 C:\Users\mrabe\OneDrive\Escritorio\ORT\Proyecto-Final-4TO\obj\Debug\net7.0\ProyectoFinal4To.pdb
 C:\Users\mrabe\OneDrive\Escritorio\ORT\Proyecto-Final-4TO\obj\Debug\net7.0\ProyectoFinal4To.genruntimeconfig.cache
 C:\Users\mrabe\OneDrive\Escritorio\ORT\Proyecto-Final-4TO\obj\Debug\net7.0\ref\ProyectoFinal4To.dll
-C:\Users\47436029\Proyecto-Final-4TO\obj\Debug\net7.0\ProyectoFinal4To.csproj.CopyComplete
 C:\Users\Martin\Desktop\Proyecto-Final-4TO\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Martin\Desktop\Proyecto-Final-4TO\bin\Debug\net7.0\appsettings.json
 C:\Users\Martin\Desktop\Proyecto-Final-4TO\bin\Debug\net7.0\ProyectoFinal4To.staticwebassets.runtime.json
@@ -627,3 +626,5 @@ C:\Users\MARCOS\Proyecto-Final-4TO\obj\Debug\net7.0\refint\ProyectoFinal4To.dll
 C:\Users\MARCOS\Proyecto-Final-4TO\obj\Debug\net7.0\ProyectoFinal4To.pdb
 C:\Users\MARCOS\Proyecto-Final-4TO\obj\Debug\net7.0\ProyectoFinal4To.genruntimeconfig.cache
 C:\Users\MARCOS\Proyecto-Final-4TO\obj\Debug\net7.0\ref\ProyectoFinal4To.dll
+C:\Users\47436029\Proyecto-Final-4TO\obj\Debug\net7.0\ProyectoFinal4To.sourcelink.json
+C:\Users\47436029\Proyecto-Final-4TO\obj\Debug\net7.0\Proyecto.C27BE03B.Up2Date

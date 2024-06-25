@@ -37,8 +37,8 @@
 
 
    
-        
-        <div class="modal-body" >
+        @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
+           <div class="modal-body" >
                     <input type="hidden" name="idCliente" value="@BD.user.IdCliente">
                     <input type="hidden" name="id" id="IdRestaurante" value="ViewBag.InfoRes.IdRestaurante">
                     <div id="cuadroTexto">
@@ -59,12 +59,12 @@
                             <label title="text" for="star1"></label>
                         </div>     
                     </div>
-                </div>
                 <div class="footer-btns">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Salir</button>
                     <button type="button" class="btn btn-outline-success"onclick=" GuardarReseña(@BD.user.IdCliente, @ViewBag.InfoRes.IdRestaurante)" data-bs-dismiss="modal">Publicar</button>
                 </div>
     </div>
+        }
+       
 
                 <main class="main-reseñas">
                 <div class="padre-reseñas">
