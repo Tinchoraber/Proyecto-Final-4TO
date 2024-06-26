@@ -70,6 +70,7 @@
                       
                         @foreach (var item in ViewBag.Restaurantes)
                         {
+                            
                             <div class="padre-reservas">
 
                             <div class="card-reserva">
@@ -78,6 +79,7 @@
                                         <img src="@item.Imagen" alt="">
                                     </div>
                                     <div class="dentro-reserva">
+                                        
                                         <p><span class="span-reservas">Lugar:</span> @item.NombreRestaurante</p>
                                         <p><span class="span-reservas">Fecha:</span> @item.FechaReserva.ToShortDateString()</p>
                                         <p><span class="span-reservas">Hora:</span> @item.HoraReserva</p>
@@ -103,8 +105,10 @@
             {
                 @if(ViewBag.ListaReservas != null)
                 { 
+                    
                     @foreach (var item in ViewBag.ListaReservas)
                     {
+                        
                         <div class="padre-reservas">
                             <div class="card-reserva">
                                 

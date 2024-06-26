@@ -1,50 +1,55 @@
 <header>
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-<a href='@Url.Action("Bienvenida", "Dennys")'><img src="../IMG/logo-dennys.png" alt="Logo"></a>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a href='@Url.Action("Bienvenida", "Dennys")'><img src="../IMG/logo-dennys.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="items-navegador">
-
         <div class="navbar-item">
-            <a class="linkk"  href='@Url.Action("Bienvenida", "Dennys")'>Inicio</a>
-          </div>
-
-          <div class="navbar-item">
+            <a class="linkk" href='@Url.Action("Bienvenida", "Dennys")'>Inicio</a>
+        </div>
+        <div class="navbar-item">
             <a class="linkk" href='@Url.Action("Ayuda", "Dennys")'>Ayuda</a>
-          </div>
-
-          <div class="navbar-item">
-             <li class="nav-item dropdown">
-                <a class="linkk dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Funcionalidades
-                </a>
-                  <ul class="dropdown-menu">
-                  @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
-                    <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Tu Reserva</a></li>
-                  }
-                  else{
-                     <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Reservas</a></li>
-                  }
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesion</a></li>
-                  </ul>
-            </li>
-          </div>
-
-          @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscá aqui" aria-label="Search">
-                <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
-              </form>
+        </div>
+        <div class="navbar-item">
+          <li class="nav-item dropdown">
+            <a class="linkk dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Funcionalidades
+            </a>
+            <ul class="dropdown-menu">
+              @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false)
+              {
+                <li><a class="dropdown-item" href='@Url.Action("ObtenerReservas", "Dennys", new { idCliente = @BD.user.IdCliente })'>Tu Reserva</a></li>
               }
-             
+              else
+              {
+                <li><a class="dropdown-item" href='@Url.Action("ObtenerReservas", "Dennys", new { idCliente = @BD.user.IdCliente })'>Reservas</a></li>
+              }
+              @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+              {
+                <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
+              }
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesión</a></li>
+            </ul>
+          </li>
+        </div>
+        @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false)
+        {
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscá aquí" aria-label="Search">
+            <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
+          </form>
+        }
+      </div>
     </div>
   </div>
 </nav>
- </header>
+</header>
+
+
  
  <main>
         <div class="padre">
@@ -90,27 +95,29 @@
 
 
         </div>
-        @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
-          <div class="servicio-padre">
-          <div class="contenedor-ayuda">
-          <div class="title-servicio">
-            <h2>Como agrego un restaurante?</h2>
-          </div>
-          <div class="servicio-detalles">
-          <p> Dirígete al menú de "Funcionalidades" ubicado en la parte superior de la pantalla, haciendo clic en el botón correspondiente. Una vez allí, encontrarás una opción llamada "Agregar Restaurante". Haz clic en este botón y serás guiado a través de un proceso fácil y rápido para agregar la información de tu restaurante. ¡Estamos emocionados de ver tu restaurante en nuestra plataforma y compartirlo con nuestra comunidad de amantes de la buena comida! Si tienes alguna pregunta o necesitas ayuda, no dudes en visitar la sección de "Ayuda" o contactarnos directamente. ¡Gracias por ser parte de nuestra comunidad gastronómica!</p>
-          <p>Tambien podes agregar tu restaurante haciendo clic aqui:</p>
-              <div class="padre-buttonn">
-              <div class="div-botonn">
-                <button class="button" type="submit" ><a href='@Url.Action("AgregarRestaurante", "Dennys")'> <img id="singo" src="../img/signoMas.png">Agregar Restaurante</a></button>
+    @if (ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+{
+    <div class="servicio-padre">
+        <div class="contenedor-ayuda">
+            <div class="title-servicio">
+                <h2>Como agrego un restaurante?</h2>
+            </div>
+            <div class="servicio-detalles">
+                <p> Dirígete al menú de "Funcionalidades" ubicado en la parte superior de la pantalla, haciendo clic en el botón correspondiente. Una vez allí, encontrarás una opción llamada "Agregar Restaurante". Haz clic en este botón y serás guiado a través de un proceso fácil y rápido para agregar la información de tu restaurante. ¡Estamos emocionados de ver tu restaurante en nuestra plataforma y compartirlo con nuestra comunidad de amantes de la buena comida! Si tienes alguna pregunta o necesitas ayuda, no dudes en visitar la sección de "Ayuda" o contactarnos directamente. ¡Gracias por ser parte de nuestra comunidad gastronómica!</p>
+                <p>Tambien podes agregar tu restaurante haciendo clic aqui:</p>
+                <div class="padre-buttonn">
+                    <div class="div-botonn">
+                        <button class="button" type="submit">
+                            <a href='@Url.Action("AgregarRestaurante", "Dennys")'>
+                                <img id="singo" src="../img/signoMas.png">Agregar Restaurante
+                            </a>
+                        </button>
+                    </div>
                 </div>
-                </div>        </div>
+            </div>
         </div>
-       
-        
-
-
-      </div>
-       }
+    </div>
+}
 
       <div class="consulta-padre">
         <div class="contenedor-consulta">

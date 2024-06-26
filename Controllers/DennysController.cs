@@ -112,6 +112,7 @@ public IActionResult VerMas(int id)
 
 public IActionResult AgregarRestaurante()
 {
+    ViewBag.Cliente = BD.user;
     return View("AgregarRestaurante");
 }
 
