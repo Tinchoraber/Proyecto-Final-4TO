@@ -18,6 +18,7 @@ public class DennysController : Controller
     }
       public IActionResult Ayuda()
     {
+        ViewBag.Cliente = BD.user;
         return View("Ayuda");
     }
      

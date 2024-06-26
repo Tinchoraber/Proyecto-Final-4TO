@@ -19,14 +19,13 @@
               Funcionalidades
             </a>
             <ul class="dropdown-menu">
-              @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false)
-              {
-                <li><a class="dropdown-item" href='@Url.Action("ObtenerReservas", "Dennys", new { idCliente = @BD.user.IdCliente })'>Tu Reserva</a></li>
-              }
-              else
-              {
-                <li><a class="dropdown-item" href='@Url.Action("ObtenerReservas", "Dennys", new { idCliente = @BD.user.IdCliente })'>Reservas</a></li>
-              }
+             @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false){
+    <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Tu Reserva</a></li>
+  }
+  else{
+    <li><a class="dropdown-item" href= '@Url.Action("ObtenerReservas", "Dennys", new {idCliente = @BD.user.IdCliente})'>Reservas</a></li>
+}
+
               @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
               {
                 <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
