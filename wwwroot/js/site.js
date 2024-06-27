@@ -221,7 +221,15 @@
     
     document.addEventListener("DOMContentLoaded", function () {
       const searchButton = document.getElementById("searchButton");
+      const searchInput = document.getElementById("searchInput");
+    
       searchButton.addEventListener("click", filterCardsByTitle);
+    
+      searchInput.addEventListener("input", function () {
+        if (searchInput.value.trim() === "") {
+          showAllCards();
+        }
+      });
     });
     
     function filterCardsByTitle() {
@@ -236,31 +244,21 @@
         if (title.includes(searchValue)) {
           carta.style.display = "block"; 
           foundRestaurant = true; 
-        } 
+        } else {
+          carta.style.display = "none"; 
+        }
       });
       
-      if (!foundRestaurant) {
-        alert("No se ha encontrado ningún restaurante con cese nombre.");
+      if (!foundRestaurant && searchValue !== "") {
+        alert("No se ha encontrado ningún restaurante con ese nombre.");
       }
     }
-
-  
-    document.addEventListener("DOMContentLoaded", function () {
-      const searchButton = document.getElementById("searchButton");
-      searchButton.addEventListener("click", filterCardsByTitle);
-    });
     
-    function filterCardsByTitle() {
-      const searchInput = document.getElementById("searchInput");
-      const searchValue = searchInput.value.trim().toLowerCase();
-    
-      const carta = document.querySelectorAll(".carta"); // Selecciona todas las tarjetasheis
-      carta.forEach((carta) => {
-          const title = carta.querySelector(".div-p-nombre p").textContent.toLowerCase(); // Obtén el título del restaurante
-          if (title.includes(searchValue)) {
-            carta.style.display = "block"; // Muestra la tarjeta si coincide con la búsqueda
-          } else {
-            carta.style.display = "none"; // Oculta la tarjeta si no coincide con la búsqueda
-          }
+    function showAllCards() {
+      const cards = document.querySelectorAll(".carta"); 
+      cards.forEach((carta) => {
+        carta.style.display = "block";
       });
     }
+    
+    

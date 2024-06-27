@@ -34,18 +34,15 @@
                                     {
                                         <li><a class="dropdown-item" href='@Url.Action("ObtenerReservas", "Dennys", new { idCliente = ViewBag.Cliente.IdCliente })'>Reservas</a></li>
                                     }
+                                     @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == true)
+                                    {
+                                        <li><a class="dropdown-item" href='@Url.Action("AgregarRestaurante", "Dennys")'>Agregar Restaurante</a></li>
+                                    }
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item sa" href='@Url.Action("Index", "Home")'>Cerrar sesión</a></li>
                                 </ul>
                             </li>
                         </div>
-                        @if(ViewBag.Cliente != null && ViewBag.Cliente.TipoCliente == false)
-                        {
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" id="searchInput" type="search" placeholder="Buscar aquí" aria-label="Search">
-                                <button class="btn btn-outline-success" id="searchButton" type="button">Buscar</button>
-                            </form>
-                        }
                     </div>
                 </div>
             </div>
